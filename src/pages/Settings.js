@@ -29,6 +29,8 @@ const Setting = (props) => {
   const [callCharge, setCallCharge] = useState(0);
   const [googlePlayEmail, setGooglePlayEmail] = useState("");
   const [googlePlayKey, setGooglePlayKey] = useState("");
+  const [bkashPersonal, setBkashPersonal] = useState("");
+  const [bkashAgent, setBkashAgent] = useState("");
   const [stripePublishableKey, setStripePublishableKey] = useState("");
   const [stripeSecretKey, setStripeSecretKey] = useState("");
   const [currency, setCurrency] = useState("$");
@@ -89,6 +91,8 @@ const Setting = (props) => {
       setCallCharge(setting.callCharge);
       setGooglePlayEmail(setting.googlePlayEmail);
       setGooglePlayKey(setting.googlePlayKey);
+      setBkashAgent(setting.bkashAgent);
+      setBkashPersonal(setting.bkashPersonal);
       setStripePublishableKey(setting.stripePublishableKey);
       setStripeSecretKey(setting.stripeSecretKey);
       setCurrency(setting.currency);
@@ -176,6 +180,8 @@ const Setting = (props) => {
       callCharge: callCharge === "" ? 0 : callCharge,
       googlePlayEmail,
       googlePlayKey,
+      bkashPersonal,
+      bkashAgent,
       stripePublishableKey,
       stripeSecretKey,
       currency,
@@ -650,6 +656,50 @@ const Setting = (props) => {
                       onChange={(e) => setGooglePlayKey(e.target.value)}
                     />
                   </div>
+                  <div className="d-flex justify-content-end">
+                    <button
+                      type="button"
+                      class="btn btn-danger "
+                      onClick={handleSubmit}
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="row">
+                <h5 class="card-title d-flex justify-content-between mt-3">
+                  Bkash
+
+                </h5>
+
+                <form>
+                  <div class="mb-3">
+                    <label for="googlePlayEmail" class="form-label">
+                      Bkash Personal
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="bkashPersonal"
+                      value={bkashPersonal}
+                      onChange={(e) => setBkashPersonal(e.target.value)}
+                    />
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="googlePlayEmail" class="form-label">
+                      Bkash Agent
+                    </label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="bkashAgent"
+                      value={bkashAgent}
+                      onChange={(e) => setBkashAgent(e.target.value)}
+                    />
+                  </div>
+
                   <div className="d-flex justify-content-end">
                     <button
                       type="button"

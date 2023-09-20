@@ -33,6 +33,7 @@ const VIPPlanDialog = (props) => {
   const [validityType, setValidityType] = useState("");
   const [dollar, setDollar] = useState("");
   const [rupee, setRupee] = useState("");
+  const [daimond, setDaimond] = useState("");
   const [tag, setTag] = useState("");
   const [productKey, setProductKey] = useState("");
   const [name, setName] = useState("");
@@ -41,6 +42,7 @@ const VIPPlanDialog = (props) => {
     validity: "",
     dollar: "",
     rupee: "",
+    daimond: "",
     productKey: "",
   });
 
@@ -51,6 +53,7 @@ const VIPPlanDialog = (props) => {
       setValidityType(dialogData.validityType);
       setDollar(dialogData.dollar);
       setRupee(dialogData.rupee);
+      setDaimond(dialogData.daimond);
       setTag(dialogData.tag);
       setProductKey(dialogData.productKey);
       setName(dialogData.name);
@@ -63,6 +66,7 @@ const VIPPlanDialog = (props) => {
         validity: "",
         dollar: "",
         rupee: "",
+        daimond: "",
         productKey: "",
         name: "",
       });
@@ -72,6 +76,7 @@ const VIPPlanDialog = (props) => {
       setTag("");
       setDollar("");
       setRupee("");
+      setDaimond("");
       setProductKey("");
       setName("");
     },
@@ -94,6 +99,7 @@ const VIPPlanDialog = (props) => {
       if (!validity) error.validity = "Validity is required!";
       if (!dollar) error.dollar = "Dollar is required!";
       if (!rupee) error.rupee = "Rupee is required!";
+      if (!daimond) error.daimond = "Daimond is required!";
       if (!productKey) error.productKey = "Product Key is required!";
 
       return setError({ ...error });
@@ -111,12 +117,17 @@ const VIPPlanDialog = (props) => {
     if (!rupeeValid) {
       return setError({ ...errors, rupee: "Invalid Rupee!!" });
     }
+    const daimondValid = isNumeric(daimond);
+    if (!daimondValid) {
+      return setError({ ...errors, daimond: "Invalid daimond!!" });
+    }
 
     const data = {
       validity,
       validityType: validityType ? validityType : "day",
       dollar,
       rupee,
+      daimond,
       tag,
       productKey,
       name,
@@ -321,6 +332,41 @@ const VIPPlanDialog = (props) => {
                           {errors.rupee && (
                             <div className="pl-1 text__left">
                               <span className="text-red">{errors.rupee}</span>
+                            </div>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                  <div className="col-md-12">
+                    <div className="form-group mt-4">
+                      <label className="text-gray mb-2">Daimond</label>
+                      <input
+                        type="number"
+                        className="form-control"
+                        required=""
+                        placeholder="100"
+                        value={daimond}
+                        onChange={(e) => {
+                          setDaimond(e.target.value);
+                          if (!e.target.value) {
+                            return setError({
+                              ...errors,
+                              rupee: "Rupee is Required !",
+                            });
+                          } else {
+                            return setError({
+                              ...errors,
+                              daimond: "",
+                            });
+                          }
+                        }}
+                      />
+                      {errors.daimond && (
+                        <div className="ml-2 mt-1">
+                          {errors.daimond && (
+                            <div className="pl-1 text__left">
+                              <span className="text-red">{errors.daimond}</span>
                             </div>
                           )}
                         </div>

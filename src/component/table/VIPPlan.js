@@ -167,7 +167,8 @@ const VIPPlanTable = (props) => {
                     <th>No.</th>
                     <th>Validity</th>
                     <th>Dollar</th>
-                    <th>Rupee</th>
+                    <th>BDT</th>
+                    <th>Diamond</th>
                     <th>Tag</th>
                     {/* <th>Is Auto Renew</th> */}
                     <th>Edit</th>
