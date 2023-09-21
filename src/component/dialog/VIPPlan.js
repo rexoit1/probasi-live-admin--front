@@ -305,7 +305,7 @@ const VIPPlanDialog = (props) => {
                   </div>
                   <div className="col-md-6">
                     <div className="form-group mt-4">
-                      <label className="text-gray mb-2">Rupee</label>
+                      <label className="text-gray mb-2">Taka</label>
                       <input
                         type="number"
                         className="form-control"

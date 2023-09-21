@@ -192,6 +192,7 @@ const VIPPlanTable = (props) => {
                           </td>
                           <td>{data.dollar}</td>
                           <td>{data.rupee}</td>
+                          <td>{data.diamond ? data.diamond : "-"}</td>
                           <td>{data.tag ? data.tag : "-"}</td>
                           {/* <td>
                             <label className="switch">
