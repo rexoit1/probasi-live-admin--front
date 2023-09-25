@@ -1,0 +1,39 @@
+name: Deploy to DigitalOcean
+
+on:
+  push:
+    branches:
+      - main # Change this to your main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v2
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build Application
+      run: npm run build # Adjust this to your build command
+
+    - name: Deploy to DigitalOcean
+      uses: appleboy/scp-action@v0.1.4
+      with:
+        host: ${{ secrets.DROPLET_HOST }}
+        username: ${{ secrets.DROPLET_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        source: "build" # Change this to your build output directory
+        target: "/var/www/html" # Change this to your deployment directory on the Droplet
+
+    - name: SSH into Droplet
+      uses: appleboy/ssh-action@v0.8.0
+      with:
+        host: ${{ secrets.DROPLET_HOST }}
+        username: ${{ secrets.DROPLET_USERNAME }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          cd /var/www/html
+          # Additional deployment steps, e.g., restart server, etc.
