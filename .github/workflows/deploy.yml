@@ -20,7 +20,7 @@ jobs:
       run: npm run build # Adjust this to your build command
 
     - name: Deploy to DigitalOcean
-      uses: appleboy/scp-action@v0.1.4
+      uses: invi5H/ssh-action@v1.0.0
       with:
         host: ${{ secrets.DROPLET_HOST }}
         username: ${{ secrets.DROPLET_USERNAME }}
