@@ -597,3 +597,59 @@ audio::-webkit-media-controls-panel {
   color: #9a9cab !important;
 
 }
+
+
+
+/* transcation table styles  */
+.full_box_tran{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.table_tran{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
+
+.table_tran li{
+  list-style: none;
+}
+
+.tran_btn{
+  padding: 10px 12px 10px 12px;
+  border-radius: 4px;
+  background-color: #ADA6F2;
+  color: #fff;
+}
+
+.action_table{
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.tran_btn_ap{
+  padding: 10px 12px;
+  border-radius: 4px;
+  background-color: #E8538F;
+  color: #fff;
+}
+
+.tran_btn_re{
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #FFF;
+  background: none;
+  color: #fff;
+}
+
+.table-w-1{
+  width: 150px;
+}
+.table-w-1{
+  display: flex;
+  justify-self: flex-start;
+  width: 150px;
+}

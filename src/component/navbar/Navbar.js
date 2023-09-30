@@ -69,14 +69,7 @@ const Navbar = () => {
               Dashboard
             </Link>
           </li>
-          {/* <li data-bs-toggle="tooltip" data-bs-placement="top" title="User">
-            <Link to="/admin/user" className={`${classes.navLink}`}>
-              <span className="sidenav__icon">
-                <i data-feather="users"></i>
-              </span>
-              User
-            </Link>
-          </li> */}
+          
           <li
             data-bs-toggle="tooltip"
             data-bs-placement="top"
@@ -107,6 +100,8 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
+
+
           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Banner">
             <Link to="/admin/banner" className={`${classes.navLink}`}>
               <span className="sidenav__icon">
@@ -115,6 +110,7 @@ const Navbar = () => {
               Banner
             </Link>
           </li>
+
           <li
             data-bs-toggle="tooltip"
             data-bs-placement="top"
@@ -145,6 +141,7 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
+
           <li
             data-bs-toggle="tooltip"
             data-bs-placement="top"
@@ -181,6 +178,7 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
+
           <li
             data-bs-toggle="tooltip"
             data-bs-placement="top"
@@ -228,6 +226,7 @@ const Navbar = () => {
               Sticker
             </Link>
           </li>
+
           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Song">
             <Link to="/admin/song" className={`${classes.navLink}`}>
               <span className="sidenav__icon">
@@ -236,6 +235,7 @@ const Navbar = () => {
               Song
             </Link>
           </li>
+
           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Hashtag">
             <Link to="/admin/hashtag" className={`${classes.navLink}`}>
               <span className="sidenav__icon">
@@ -244,6 +244,7 @@ const Navbar = () => {
               Hashtag
             </Link>
           </li>
+
           <li
             data-bs-toggle="tooltip"
             data-bs-placement="top"
@@ -256,6 +257,7 @@ const Navbar = () => {
               Comment
             </Link>
           </li>
+
           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Level">
             <Link to="/admin/level" className={`${classes.navLink}`}>
               <span className="sidenav__icon">
@@ -343,6 +345,80 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <li
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="Transection"
+            className="pointer-cursor"
+          >
+            <a
+              href={() => false}
+              className="add-collapse-margin"
+              style={{ marginLeft: 0 }}
+            >
+              <span className="sidenav__icon">
+                <i data-feather="key"></i>
+              </span>
+              Transection
+              <i class="fas fa-chevron-right dropdown-icon"></i>
+            </a>
+            <ul class="">
+              <li>
+                <Link to="/admin/transcation" className={`${classes.navLink}`}>
+                  <i class="far fa-circle"></i>Pending Transection
+                </Link>
+              </li>
+            </ul>
+          </li>
+
+
+
+
+
+
+
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Video">
             <Link to="/admin/reportedUser" className={`${classes.navLink}`}>
               <span className="sidenav__icon">
@@ -351,6 +427,7 @@ const Navbar = () => {
               Reported User
             </Link>
           </li>
+
           <li
             data-bs-toggle="tooltip"
             data-bs-placement="top"
@@ -387,6 +464,7 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
+
           <li
             data-bs-toggle="tooltip"
             data-bs-placement="top"
@@ -444,6 +522,7 @@ const Navbar = () => {
               Google Ad
             </Link>
           </li>
+
           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Setting">
             <Link to="/admin/Setting" className={`${classes.navLink}`}>
               <span className="sidenav__icon">
@@ -452,6 +531,7 @@ const Navbar = () => {
               Setting
             </Link>
           </li>
+
           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Profile">
             <Link to="/admin/profile" className={`${classes.navLink}`}>
               <span className="sidenav__icon">
@@ -460,6 +540,7 @@ const Navbar = () => {
               Profile
             </Link>
           </li>
+
           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Logout">
             <a
               href={() => false}
@@ -469,6 +550,7 @@ const Navbar = () => {
               <i data-feather="log-out"></i>Logout
             </a>
           </li>
+
         </ul>
         <a
           href={() => false}

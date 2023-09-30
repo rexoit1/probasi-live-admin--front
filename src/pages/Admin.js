@@ -53,6 +53,7 @@ import FakeVideoPage from "../component/dialog/FakeVideoPage";
 import Spinner from "./Spinner";
 import Profile from "./Profile.js";
 import FakeComment from "../component/table/FakeComment.js";
+import transcationPage from "../component/dialog/transcationPage.js";
 
 
 
@@ -281,6 +282,11 @@ const Admin = () => {
                 path={`${location.path}/video/dialog`}
                 exact
                 component={FakeVideoPage}
+              />
+              <Route
+                path={`${location.path}/transcation`}
+                exact
+                component={transcationPage}
               />
                 <Route
                 path={`${location.path}/comment`}
