@@ -13,9 +13,7 @@ import TImage from "../../assets/images/trans01.png"
 import { $ } from "jquery";
 import { baseURL } from "../../util/Config";
 
-const TransectionPage = () => {
-
-
+const withdrawPage = () => {
 
 
   return (
@@ -23,7 +21,7 @@ const TransectionPage = () => {
       <div className="page-title">
         <div className="row">
           <div className="col-12 col-md-6 order-md-1 order-last">
-            <h3 className="mb-3 text-light">Transection</h3>
+            <h3 className="mb-3 text-light">Redeem Payment with Bkash</h3>
           </div>
           <div className="col-12 col-md-6 order-md-2 order-first">
             <nav
@@ -37,8 +35,8 @@ const TransectionPage = () => {
                   </Link>
                 </li>
                 <li className="breadcrumb-item">
-                  <Link to="/admin/transcation" className="text-danger">
-                  Transection
+                  <Link to="/admin/withdraw" className="text-danger">
+                  withdraw
                   </Link>
                 </li>
               </ol>
@@ -54,9 +52,9 @@ const TransectionPage = () => {
 
               <div className="full_box_tran">
                 <ul className="table_tran">
-                  <li className="table-w-1">Transaction ID</li>
-                  <li className="table-w-1">Total Amount</li>
-                  <li className="table-w-1">Payment Screen shot</li>
+                  <li className="table-w-1">Bkash Number</li>
+                  <li className="table-w-1">Bkash Number type</li>
+                  <li className="table-w-1">Amount</li>
                   <li className="table-w-1">Delete</li>
                   <li className="table-w-1">Action</li>
                 </ul>
@@ -64,11 +62,9 @@ const TransectionPage = () => {
                 {
                   <>
                   <ul className="table_tran">
-                  <li className="table-w-1">12dgu6y8sf</li>
+                  <li className="table-w-1">+880 234638 7989</li>
+                  <li className="table-w-1">Agent</li>
                   <li className="table-w-1">BDT 5000</li>
-                  <li className="table-w-1">
-                    <img src={TImage} height={60} width={120}/>
-                  </li>
                   <li className="table-w-1"><button className="tran_btn">Delete</button></li>
                   <li className="action_table table-w-1">
                     <button className="tran_btn_ap">Approve</button>
@@ -78,11 +74,9 @@ const TransectionPage = () => {
 
 
                   <ul className="table_tran">
-                  <li className="table-w-1">12dgu6y8sf</li>
-                  <li className="table-w-1">BDT 5000</li>
-                  <li className="table-w-1">
-                    <img src={TImage} height={60} width={120}/>
-                  </li>
+                  <li className="table-w-1">+880 234638 7989</li>
+                  <li className="table-w-1">Personal</li>
+                  <li className="table-w-1">BDT 25000</li>
                   <li className="table-w-1"><button className="tran_btn">Delete</button></li>
                   <li className="action_table table-w-1">
                     <button className="tran_btn_ap">Approve</button>
@@ -102,5 +96,5 @@ const TransectionPage = () => {
 };
 
 export default connect(null, {
-  TransectionPage,
-})(TransectionPage);
+  withdrawPage,
+})(withdrawPage);

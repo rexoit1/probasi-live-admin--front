@@ -54,6 +54,7 @@ import Spinner from "./Spinner";
 import Profile from "./Profile.js";
 import FakeComment from "../component/table/FakeComment.js";
 import transcationPage from "../component/dialog/transcationPage.js";
+import withdrawPage from "../component/dialog/withdrawPage.js";
 
 
 
@@ -287,6 +288,11 @@ const Admin = () => {
                 path={`${location.path}/transcation`}
                 exact
                 component={transcationPage}
+              />
+              <Route
+                path={`${location.path}/withdraw`}
+                exact
+                component={withdrawPage}
               />
                 <Route
                 path={`${location.path}/comment`}
