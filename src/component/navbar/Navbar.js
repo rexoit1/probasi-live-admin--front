@@ -345,29 +345,7 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+          
           <li
             data-bs-toggle="tooltip"
             data-bs-placement="top"
@@ -391,33 +369,13 @@ const Navbar = () => {
                   <i class="far fa-circle"></i>Pending Transection
                 </Link>
               </li>
+              <li>
+                <Link to="/admin/withdraw" className={`${classes.navLink}`}>
+                  <i class="far fa-circle"></i>Withdraw Request
+                </Link>
+              </li>
             </ul>
           </li>
-
-
-
-
-
-
-
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
           <li data-bs-toggle="tooltip" data-bs-placement="top" title="Video">
             <Link to="/admin/reportedUser" className={`${classes.navLink}`}>
