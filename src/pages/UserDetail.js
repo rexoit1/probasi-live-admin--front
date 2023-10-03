@@ -60,6 +60,7 @@ const UserDetail = (props) => {
 
   const [coin, setCoin] = useState(0);
   const [isCoin, setIsCoin] = useState(false);
+  const [email, setEmail] = useState("");
 
   const [diamond, setDiamond] = useState(0);
   const [isDiamond, setIsDiamond] = useState(false);
@@ -170,6 +171,11 @@ const UserDetail = (props) => {
       data = {
         userId: id,
         rCoin: coin,
+      };
+    } else if (type === "email") {
+      data = {
+        userId: id,
+        email: coin,
       };
     } else {
       setIsDiamond(true);
@@ -376,10 +382,33 @@ const UserDetail = (props) => {
             <div class="card-body">
               <h5 class="card-title">Contact Info</h5>
               <ul class="list-unstyled profile-about-list">
+
                 <li>
+                  <span className="d-flex" style={{ alignItems: "baseline" }}>
                   <i class="far fa-envelope m-r-xxs"></i>
-                  <span>{user?.email}</span>
+                  Email &nbsp;
+                    <EdiText
+                      type="text"
+                      value={user?.email}
+                      onSave={(val) => handleSave(val, user?._id, "email")}
+                      className="editClass"
+                    />
+                  </span>
                 </li>
+
+                <li>
+                  <span className="d-flex" style={{ alignItems: "baseline" }}>
+                  <i class="far fa-key m-r-xxs"></i>
+                  Password &nbsp;
+                    <EdiText
+                      type="text"
+                      value={user?.password}
+                      onSave={(val) => handleSave(val, user?._id, "password")}
+                      className="editClass"
+                    />
+                  </span>
+                </li>
+
                 <li>
                   <i class="far fa-compass m-r-xxs"></i>
                   <span>
