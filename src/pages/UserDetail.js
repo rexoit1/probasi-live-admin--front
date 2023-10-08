@@ -60,6 +60,7 @@ const UserDetail = (props) => {
 
   const [coin, setCoin] = useState(0);
   const [isCoin, setIsCoin] = useState(false);
+  const [email, setEmail] = useState("");
 
   const [diamond, setDiamond] = useState(0);
   const [isDiamond, setIsDiamond] = useState(false);
@@ -171,7 +172,18 @@ const UserDetail = (props) => {
         userId: id,
         rCoin: coin,
       };
-    } else {
+    } else if (type === "email") {
+      data = {
+        userId: id,
+        email: coin,
+      };
+    } else if (type === "isVIP") {
+      data = {
+        userId: id,
+        isVIP: coin,
+      };
+    } 
+    else {
       setIsDiamond(true);
       setDiamond(coin);
       data = {
@@ -339,9 +351,9 @@ const UserDetail = (props) => {
                     </span>
                   </span>
                 </li>
-                <li>
-                  <i class="fas fa-crown m-r-xxs"></i>
-                  <span>
+                <li className="d-flex">
+                  <i className="fas fa-crown m-r-xxs"></i>
+                  <span className="d-flex">
                     isVIP &nbsp;
                     <span
                       className={`${
@@ -350,6 +362,12 @@ const UserDetail = (props) => {
                     >
                       {user?.isVIP ? "Yes" : "No"}
                     </span>
+                    <EdiText
+                      type="text"
+                      value={""}
+                      onSave={(val) => handleSave(val, user?._id, "isVIP")}
+                      className="editClass"
+                    />
                   </span>
                 </li>
                 <li>
@@ -376,10 +394,33 @@ const UserDetail = (props) => {
             <div class="card-body">
               <h5 class="card-title">Contact Info</h5>
               <ul class="list-unstyled profile-about-list">
+
                 <li>
+                  <span className="d-flex" style={{ alignItems: "baseline" }}>
                   <i class="far fa-envelope m-r-xxs"></i>
-                  <span>{user?.email}</span>
+                  Email &nbsp;
+                    <EdiText
+                      type="text"
+                      value={user?.email}
+                      onSave={(val) => handleSave(val, user?._id, "email")}
+                      className="editClass"
+                    />
+                  </span>
                 </li>
+
+                <li>
+                  <span className="d-flex" style={{ alignItems: "baseline" }}>
+                  <i class="far fa-key m-r-xxs"></i>
+                  Password &nbsp;
+                    <EdiText
+                      type="text"
+                      value={user?.password}
+                      onSave={(val) => handleSave(val, user?._id, "password")}
+                      className="editClass"
+                    />
+                  </span>
+                </li>
+
                 <li>
                   <i class="far fa-compass m-r-xxs"></i>
                   <span>

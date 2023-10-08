@@ -13,10 +13,27 @@ import TImage from "../../assets/images/trans01.png"
 import { $ } from "jquery";
 import { baseURL } from "../../util/Config";
 
+
+
 const TransectionPage = () => {
 
+  const [trans, setTrans] = useState([])
 
 
+  useEffect(()=>{
+    fetch(baseURL+"transecPending/getTransecPendings")
+      .then(data => data.json())
+      .then(json => setTrans(json?.transecPendings))
+  },[])
+
+
+  const handleUpdateTrans=()=>{
+
+  }
+
+  const handleDeleteTrans=()=>{
+
+  }
 
   return (
     <>
@@ -61,38 +78,20 @@ const TransectionPage = () => {
                   <li className="table-w-1">Action</li>
                 </ul>
 
-                {
-                  <>
-                  <ul className="table_tran">
-                  <li className="table-w-1">12dgu6y8sf</li>
-                  <li className="table-w-1">BDT 5000</li>
+                { trans.map(item=><ul key={item?._id} className="table_tran">
+                  <li className="table-w-1">{item?.transectionId}</li>
+                  <li className="table-w-1">BDT {item?.item}</li>
                   <li className="table-w-1">
-                    <img src={TImage} height={60} width={120}/>
+                    <img src={item?.payment_ss} height={60} width={120}/>
                   </li>
                   <li className="table-w-1"><button className="tran_btn">Delete</button></li>
                   <li className="action_table table-w-1">
-                    <button className="tran_btn_ap">Approve</button>
-                    <button className="tran_btn_re">Reject</button>
+                    <button className="tran_btn_ap">{item.status == "false" ? "Approve" : "Approved"} </button>
+                    {item.status == "false" ? <button className="tran_btn_re">Reject</button> : ""}
                   </li>
-                  </ul>
-
-
-                  <ul className="table_tran">
-                  <li className="table-w-1">12dgu6y8sf</li>
-                  <li className="table-w-1">BDT 5000</li>
-                  <li className="table-w-1">
-                    <img src={TImage} height={60} width={120}/>
-                  </li>
-                  <li className="table-w-1"><button className="tran_btn">Delete</button></li>
-                  <li className="action_table table-w-1">
-                    <button className="tran_btn_ap">Approve</button>
-                    <button className="tran_btn_re">Reject</button>
-                  </li>
-                  </ul>
-                  </>
+                  </ul>)
                 }
               </div>
-
             </div>
           </div>
         </div>

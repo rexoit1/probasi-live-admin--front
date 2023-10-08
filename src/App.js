@@ -17,6 +17,7 @@ import Admin from "./pages/Admin";
 import AuthRouter from "./util/AuthRouter";
 import ForgotPassword from "./pages/ForgotPassword";
 import ChangePassword from "./pages/ChangePassword";
+import OtpPage from "./pages/OtpPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -53,6 +54,8 @@ function App() {
 
             <AuthRouter exact path="/unlock" component={UnlockScreenPage} />
             <Route exact path="/forgot" component={ForgotPassword} />
+            {/* <Route exact path="/otp" component={OtpPage} /> */}
+            {/* <Route exact path="/changepass" component={ChangePassword} /> */}
             <Route
               exact
               path="/changePassword/:id"

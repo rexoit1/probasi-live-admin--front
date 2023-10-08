@@ -13,7 +13,26 @@ import TImage from "../../assets/images/trans01.png"
 import { $ } from "jquery";
 import { baseURL } from "../../util/Config";
 
-const withdrawPage = () => {
+const WithdrawPage = () => {
+
+  
+  const [trans, setTrans] = useState([])
+
+  useEffect(()=>{
+    fetch(baseURL+"transecWithdraw/getTransecWithdraws")
+      .then(data => data.json())
+      .then(json => console.log(json))
+  },[])
+
+  console.log(trans)
+
+  const handleUpdateTrans=()=>{
+
+  }
+
+  const handleDeleteTrans=()=>{
+
+  }
 
 
   return (
@@ -96,5 +115,5 @@ const withdrawPage = () => {
 };
 
 export default connect(null, {
-  withdrawPage,
-})(withdrawPage);
+  WithdrawPage,
+})(WithdrawPage);
