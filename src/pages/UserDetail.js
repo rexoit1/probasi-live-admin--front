@@ -177,7 +177,13 @@ const UserDetail = (props) => {
         userId: id,
         email: coin,
       };
-    } else {
+    } else if (type === "isVIP") {
+      data = {
+        userId: id,
+        isVIP: coin,
+      };
+    } 
+    else {
       setIsDiamond(true);
       setDiamond(coin);
       data = {
@@ -345,9 +351,9 @@ const UserDetail = (props) => {
                     </span>
                   </span>
                 </li>
-                <li>
-                  <i class="fas fa-crown m-r-xxs"></i>
-                  <span>
+                <li className="d-flex">
+                  <i className="fas fa-crown m-r-xxs"></i>
+                  <span className="d-flex">
                     isVIP &nbsp;
                     <span
                       className={`${
@@ -356,6 +362,12 @@ const UserDetail = (props) => {
                     >
                       {user?.isVIP ? "Yes" : "No"}
                     </span>
+                    <EdiText
+                      type="text"
+                      value={""}
+                      onSave={(val) => handleSave(val, user?._id, "isVIP")}
+                      className="editClass"
+                    />
                   </span>
                 </li>
                 <li>
