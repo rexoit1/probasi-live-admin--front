@@ -64,6 +64,10 @@ const UserDetail = (props) => {
 
   const [diamond, setDiamond] = useState(0);
   const [isDiamond, setIsDiamond] = useState(false);
+  const [isVip,setIsVip] = useState(null)
+  const onVipOptionChange = (e) =>{
+    setIsVip(e.target.value);
+  }
 
   $(document).ready(() => {
     $("#manageVideoFeed").on("click", "a", function () {
@@ -362,12 +366,13 @@ const UserDetail = (props) => {
                     >
                       {user?.isVIP ? "Yes" : "No"}
                     </span>
-                    <EdiText
+                     <EdiText
                       type="text"
                       value={""}
                       onSave={(val) => handleSave(val, user?._id, "isVIP")}
                       className="editClass"
-                    />
+                    />                  
+
                   </span>
                 </li>
                 <li>

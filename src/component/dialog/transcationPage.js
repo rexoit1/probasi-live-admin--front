@@ -1,6 +1,7 @@
 /* eslint-disable no-mixed-operators */
 import React, { useEffect, useState } from "react";
-
+import axios from "axios";
+import { Toast } from "../../util/Toast";
 // routing
 import { Link, useHistory } from "react-router-dom";
 
@@ -18,21 +19,35 @@ import { baseURL } from "../../util/Config";
 const TransectionPage = () => {
 
   const [trans, setTrans] = useState([])
+  const [deletedTrans, setDeletedTrans] = useState(null)
 
 
   useEffect(()=>{
     fetch(baseURL+"transecPending/getTransecPendings")
       .then(data => data.json())
       .then(json => setTrans(json?.transecPendings))
-  },[])
+  },[deletedTrans])
 
 
-  const handleUpdateTrans=()=>{
-
+  const handleTransStatus=(id,status)=>{
+    axios.put(`/transecPending/updateTransecPending/${id}`,{status}).then((res)=>{
+      console.log('response',res);
+      setDeletedTrans(id)
+    }).catch((error)=>{
+      Toast("error", error.message);
+    })
   }
 
-  const handleDeleteTrans=()=>{
-
+  const handleDeleteTrans=(id)=>{
+    console.log('id is', id);
+    axios.delete(`/transecPending/deleteTransecPending/${id}`)
+    .then((res)=>{
+      console.log('response',res);
+      setDeletedTrans(id)
+    })
+    .catch((error)=>{
+        Toast("error", error.message);
+    })
   }
 
   return (
@@ -80,14 +95,14 @@ const TransectionPage = () => {
 
                 { trans.map(item=><ul key={item?._id} className="table_tran">
                   <li className="table-w-1">{item?.transectionId}</li>
-                  <li className="table-w-1">BDT {item?.item}</li>
+                  <li className="table-w-1">BDT {item?.totalAmount}</li>
                   <li className="table-w-1">
-                    <img src={item?.payment_ss} height={60} width={120}/>
+                    <img src={`${baseURL}${item?.payment_ss}`} height={60} width={120}/>
                   </li>
-                  <li className="table-w-1"><button className="tran_btn">Delete</button></li>
+                  <li className="table-w-1"><button onClick={()=>{handleDeleteTrans(item?._id)}} className="tran_btn">Delete</button></li>
                   <li className="action_table table-w-1">
-                    <button className="tran_btn_ap">{item.status == "false" ? "Approve" : "Approved"} </button>
-                    {item.status == "false" ? <button className="tran_btn_re">Reject</button> : ""}
+                    <button disabled={item.status != "false" && item.status != "rejected"} onClick={()=>{handleTransStatus(item?._id,"true")}} className="tran_btn_ap">{item.status == "false" ? "Approve" : item.status == "rejected"?"canceled":"Approved"} </button>
+                    {item.status == "false" ? <button onClick={()=>{handleTransStatus(item?._id,"rejected")}} className="tran_btn_re">Reject</button> : ""}
                   </li>
                   </ul>)
                 }
