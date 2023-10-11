@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 // antd
 import { Popconfirm } from "antd";
+import axios from "axios";
 
 //react-router
 import { connect, useSelector } from "react-redux";
@@ -64,6 +65,9 @@ const UserDetail = (props) => {
 
   const [diamond, setDiamond] = useState(0);
   const [isDiamond, setIsDiamond] = useState(false);
+  const [isVIP,setIsVIP] = useState(null)
+  const [userEmail,setUserEmail] = useState(null)
+  
 
   $(document).ready(() => {
     $("#manageVideoFeed").on("click", "a", function () {
@@ -88,7 +92,7 @@ const UserDetail = (props) => {
   $(document).ready(function () {
     $("img").bind("error", function () {
       // Set the default image
-      $(this).attr("src", `${baseURL}` + "storage/male.png");
+      // $(this).attr("src", `${baseURL}` + "storage/male.png");
     });
   });
 
@@ -110,6 +114,10 @@ const UserDetail = (props) => {
     $("#manageVideoFeed li a").first().addClass("active");
   }, []);
 
+  useEffect(()=>{
+    setIsVIP(user.isVIP)
+    setUserEmail(user.email)
+  },[])
   useEffect(() => {
     props.getPost(user?._id); // eslint-disable-next-line
   }, [user?._id]);
@@ -193,6 +201,45 @@ const UserDetail = (props) => {
     }
     props.editCoin(data);
   };
+
+  const handleOnChangeValue = (event) => {
+    let vipVal
+    event.target.value == "true"? vipVal = true : vipVal = false
+    axios.patch(`/user/vipStatusChange?userId=${user._id}`,{isVIP:vipVal})
+    .then((res)=>{
+      let user =localStorage.getItem("user");
+      user = JSON.parse(user)
+      user.isVIP = vipVal
+      localStorage.setItem("user",JSON.stringify(user));
+      setIsVIP(vipVal)
+    }).catch((error)=>{
+      Toast("error", error.message);
+    })
+  }
+
+  const handleEmail = (val) => {
+    axios.patch(`/user/userEmailUpdate?userId=${user._id}`,{email:val})
+    .then((res)=>{
+      let user =localStorage.getItem("user");
+      user = JSON.parse(user)
+      user.email = val
+      localStorage.setItem("user",JSON.stringify(user));
+      setIsVIP(val);
+      Toast("success", res.data.message);
+    }).catch((error)=>{
+      Toast("error", error.message);
+    })
+  }
+  const handlePassword = (val) => {
+    axios.patch(`/user/userPasswordUpdate?userId=${user._id}`,{password:val})
+    .then((res)=>{
+       if(res.data){
+          Toast("success", res.data.message);
+       }
+    }).catch((error)=>{
+      Toast("error", error.message);
+    })
+  }
 
   return (
     <>
@@ -357,17 +404,31 @@ const UserDetail = (props) => {
                     isVIP &nbsp;
                     <span
                       className={`${
-                        user?.isVIP ? "text-success" : "text-primary"
+                        isVIP ? "text-success" : "text-primary"
                       }`}
                     >
-                      {user?.isVIP ? "Yes" : "No"}
+                      {isVIP ? "Yes" : "No"}
                     </span>
-                    <EdiText
+                     {/* <EdiText
                       type="text"
                       value={""}
                       onSave={(val) => handleSave(val, user?._id, "isVIP")}
                       className="editClass"
-                    />
+                    /> */}
+                    {
+                      isVIP != null?( <div className="d-flex" style={{marginLeft:"12px"}} >
+                        <div className="d-flex">
+                          <label htmlFor="vip">Yes</label>
+                          <input type="radio" checked={isVIP == true? true:false} id="vip" onChange={handleOnChangeValue} value="true" name="vip" />
+                        </div>
+                       <div className="d-flex" style={{marginLeft:"12px"}}>
+                          <label htmlFor="notVip">No</label>
+                          <input type="radio" checked={isVIP == false? true:false} id="notVip" onChange={handleOnChangeValue} value="false" name="vip" />
+                       </div>
+                      
+                    </div>) : <></>
+                    }          
+
                   </span>
                 </li>
                 <li>
@@ -401,8 +462,9 @@ const UserDetail = (props) => {
                   Email &nbsp;
                     <EdiText
                       type="text"
-                      value={user?.email}
-                      onSave={(val) => handleSave(val, user?._id, "email")}
+                      value={userEmail}
+                      // onSave={(val) => handleSave(val, user?._id, "email")}
+                      onSave={handleEmail}
                       className="editClass"
                     />
                   </span>
@@ -415,7 +477,7 @@ const UserDetail = (props) => {
                     <EdiText
                       type="text"
                       value={user?.password}
-                      onSave={(val) => handleSave(val, user?._id, "password")}
+                      onSave={handlePassword}
                       className="editClass"
                     />
                   </span>

@@ -3,7 +3,8 @@ import React, { useEffect, useState } from "react";
 
 // routing
 import { Link, useHistory } from "react-router-dom";
-
+import axios from "axios";
+import { Toast } from "../../util/Toast";
 // redux
 import { connect, useSelector } from "react-redux";
 
@@ -17,22 +18,35 @@ const WithdrawPage = () => {
 
   
   const [trans, setTrans] = useState([])
+  const [deletedTransWithdraw, setDeletedTransWithdraw] = useState(null)
 
   useEffect(()=>{
-    fetch(baseURL+"transecWithdraw/getTransecWithdraws")
+    fetch(baseURL+"transecWithdraw")
       .then(data => data.json())
-      .then(json => console.log(json))
-  },[])
+      .then(json => setTrans(json))
+  },[deletedTransWithdraw])
 
-  console.log(trans)
-
-  const handleUpdateTrans=()=>{
-
+  const handleTransWithdrawStatus = (id,status) => {
+    axios.put(`/transecWithdraw/${id}`,{status}).then((res)=>{
+      console.log('response',res);
+      setDeletedTransWithdraw(id)
+    }).catch((error)=>{
+      Toast("error", error.message);
+    })
   }
 
-  const handleDeleteTrans=()=>{
-
+  const handleDeleteTransWithdraw = (id) => {
+    axios.delete(`/transecWithdraw/${id}`)
+    .then((res)=>{
+      console.log('response',res);
+      setDeletedTransWithdraw(id)
+    })
+    .catch((error)=>{
+        Toast("error", error.message);
+    })
   }
+
+  
 
 
   return (
@@ -78,32 +92,19 @@ const WithdrawPage = () => {
                   <li className="table-w-1">Action</li>
                 </ul>
 
-                {
-                  <>
-                  <ul className="table_tran">
-                  <li className="table-w-1">+880 234638 7989</li>
-                  <li className="table-w-1">Agent</li>
-                  <li className="table-w-1">BDT 5000</li>
-                  <li className="table-w-1"><button className="tran_btn">Delete</button></li>
+            
+                   { trans?.TransecWithdraws?.map(item=><ul key={item?._id} className="table_tran">
+                  <li className="table-w-1">{item.bkashNumber}</li>
+                  <li className="table-w-1">{item.bkashType}</li>
+                  <li className="table-w-1">BDT {item.amount}</li>
+                  <li className="table-w-1"><button onClick={()=>{handleDeleteTransWithdraw(item?._id)}} className="tran_btn">Delete</button></li>
                   <li className="action_table table-w-1">
-                    <button className="tran_btn_ap">Approve</button>
-                    <button className="tran_btn_re">Reject</button>
+                  <button disabled={item.status != "false" && item.status != "rejected"} onClick={()=>{handleTransWithdrawStatus(item?._id,"true")}} className="tran_btn_ap">{item.status == "false" ? "Approve" : item.status == "rejected"?"canceled":"Approved"} </button>
+                    {item.status == "false" ? <button onClick={()=>{handleTransWithdrawStatus(item?._id,"rejected")}} className="tran_btn_re">Reject</button> : ""}
                   </li>
-                  </ul>
-
-
-                  <ul className="table_tran">
-                  <li className="table-w-1">+880 234638 7989</li>
-                  <li className="table-w-1">Personal</li>
-                  <li className="table-w-1">BDT 25000</li>
-                  <li className="table-w-1"><button className="tran_btn">Delete</button></li>
-                  <li className="action_table table-w-1">
-                    <button className="tran_btn_ap">Approve</button>
-                    <button className="tran_btn_re">Reject</button>
-                  </li>
-                  </ul>
-                  </>
+                  </ul>)
                 }
+                  
               </div>
 
             </div>
