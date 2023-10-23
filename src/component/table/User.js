@@ -130,7 +130,7 @@ const UserTable = (props) => {
   $(document).ready(function () {
     $("img").bind("error", function () {
       // Set the default image
-      $(this).attr("src", "https://rayzi.digicean.com/storage/male.png");
+      $(this).attr("src", "http://139.59.217.94:5000/storage/male.png");
     });
   });
 
@@ -357,7 +357,7 @@ const UserTable = (props) => {
                                 display:"block"
                               }}
                               className="mx-auto"
-                            onerror='this.src="https://rayzi.digicean.com/storage/male.png"'
+                            onerror='this.src="http://139.59.217.94:5000/storage/male.png"'
 
                             />
                           </td>
