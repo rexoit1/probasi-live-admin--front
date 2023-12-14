@@ -153,11 +153,11 @@ const SongPage = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="card-body card-overflow">
-              <div class="d-sm-flex align-items-center justify-content-between mb-4">
+      <div className="row">
+        <div className="col">
+          <div className="card">
+            <div className="card-body card-overflow">
+              <div className="d-sm-flex align-items-center justify-content-between mb-4">
               </div>
 
               <form>

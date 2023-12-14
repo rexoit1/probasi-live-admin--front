@@ -136,9 +136,9 @@ const LevelTable = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="card">
+      <div className="row">
+        <div className="col">
+          <div className="card">
             <div className="card-header pb-0">
               <div className="row my-3">
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-8 float-left">
@@ -172,10 +172,10 @@ const LevelTable = (props) => {
                 </div>
               </div>
             </div>
-            <div class="card-body card-overflow">
-              <div class="d-sm-flex align-items-center justify-content-between mb-4"></div>
+            <div className="card-body card-overflow">
+              <div className="d-sm-flex align-items-center justify-content-between mb-4"></div>
 
-              <table class="table table-striped">
+              <table className="table table-striped">
                 <thead className="text-white">
                   <tr>
                     <th>No.</th>
@@ -220,10 +220,10 @@ const LevelTable = (props) => {
                           <td>{data.name}</td>
                           <td>{data.coin}</td>
                           <td>
-                            <div class="form-check">
+                            <div className="form-check">
                               <input
                                 type="checkbox"
-                                class="form-check-input"
+                                className="form-check-input"
                                 id="liveStreaming"
                                 checked={
                                   Object.keys(data.accessibleFunction).includes(
@@ -238,17 +238,17 @@ const LevelTable = (props) => {
                                 }}
                               />
                               <label
-                                class="form-check-label"
-                                for="liveStreaming"
+                                className="form-check-label"
+                                htmlFor="liveStreaming"
                               >
                                 LiveStreaming
                               </label>
                             </div>
 
-                            <div class="form-check">
+                            <div className="form-check">
                               <input
                                 type="checkbox"
-                                class="form-check-input"
+                                className="form-check-input"
                                 id="freeCall"
                                 checked={
                                   Object.keys(data.accessibleFunction).includes(
@@ -259,15 +259,15 @@ const LevelTable = (props) => {
                                   handleAccessFunction(data._id, "freeCall");
                                 }}
                               />
-                              <label class="form-check-label" for="freeCall">
+                              <label className="form-check-label" htmlFor="freeCall">
                                 Free Call
                               </label>
                             </div>
 
-                            <div class="form-check">
+                            <div className="form-check">
                               <input
                                 type="checkbox"
-                                class="form-check-input"
+                                className="form-check-input"
                                 id="cashOut"
                                 checked={
                                   Object.keys(data.accessibleFunction).includes(
@@ -278,15 +278,15 @@ const LevelTable = (props) => {
                                   handleAccessFunction(data._id, "cashOut");
                                 }}
                               />
-                              <label class="form-check-label" for="cashOut">
+                              <label className="form-check-label" htmlFor="cashOut">
                                 Redeem [cashout]
                               </label>
                             </div>
 
-                            <div class="form-check">
+                            <div className="form-check">
                               <input
                                 type="checkbox"
-                                class="form-check-input"
+                                className="form-check-input"
                                 id="uploadPost"
                                 checked={
                                   Object.keys(data.accessibleFunction).includes(
@@ -297,14 +297,14 @@ const LevelTable = (props) => {
                                   handleAccessFunction(data._id, "uploadPost");
                                 }}
                               />
-                              <label class="form-check-label" for="uploadPost">
+                              <label className="form-check-label" htmlFor="uploadPost">
                                 Upload Social Post
                               </label>
                             </div>
-                            <div class="form-check">
+                            <div className="form-check">
                               <input
                                 type="checkbox"
-                                class="form-check-input"
+                                className="form-check-input"
                                 id="uploadVideo"
                                 checked={
                                   Object.keys(data.accessibleFunction).includes(
@@ -315,7 +315,7 @@ const LevelTable = (props) => {
                                   handleAccessFunction(data._id, "uploadVideo");
                                 }}
                               />
-                              <label class="form-check-label" for="uploadVideo">
+                              <label className="form-check-label" htmlFor="uploadVideo">
                                 Upload Video
                               </label>
                             </div>

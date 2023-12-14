@@ -70,11 +70,11 @@ const Admin = () => {
 
   return (
     <>
-      <div class="page-container">
+      <div className="page-container">
         <Navbar />
-        <div class="page-content">
+        <div className="page-content">
           <Topnav />
-          <div class="main-wrapper">
+          <div className="main-wrapper">
             <Switch>
               <Route
                 path={`${location.path}/dashboard`}

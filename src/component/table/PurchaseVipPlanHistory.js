@@ -114,9 +114,9 @@ const PurchaseVIPPlanTable = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="card" id="card">
+      <div className="row">
+        <div className="col">
+          <div className="card" id="card">
             <div className="card-header pb-0">
               <div className="row my-3">
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-8 float-left">
@@ -182,7 +182,7 @@ const PurchaseVIPPlanTable = (props) => {
                 </div>
               </div>
             </div>
-            <div class="card-body card-overflow pt-0">
+            <div className="card-body card-overflow pt-0">
               <PurchaseVipPlan data={data} />
               <Pagination
                 activePage={activePage}

@@ -247,21 +247,21 @@ const Setting = (props) => {
       </div>
 
       <div className="row">
-        <div class="col-md-6 col-12">
-          <div class="card">
-            <div class="card-body">
-              <div class="row">
-                <h5 class="card-title ">Other Setting</h5>
+        <div className="col-md-6 col-12">
+          <div className="card">
+            <div className="card-body">
+              <div className="row">
+                <h5 className="card-title ">Other Setting</h5>
 
                 <form>
-                  <div class="mb-3 row">
-                    <div class="col-md-6">
-                      <label for="referralBonus" class="form-label">
+                  <div className="mb-3 row">
+                    <div className="col-md-6">
+                      <label htmlFor="referralBonus" className="form-label">
                         Referral Bonus
                       </label>
                       <input
                         type="number"
-                        class="form-control"
+                        className="form-control"
                         id="referralBonus"
                         value={referralBonus}
                         onChange={(e) => setReferralBonus(e.target.value)}
@@ -278,13 +278,13 @@ const Setting = (props) => {
                         </div>
                       )}
                     </div>
-                    <div class="col-md-6">
-                      <label for="loginBonus" class="form-label">
+                    <div className="col-md-6">
+                      <label htmlFor="loginBonus" className="form-label">
                         Login Bonus
                       </label>
                       <input
                         type="number"
-                        class="form-control"
+                        className="form-control"
                         id="loginBonus"
                         value={loginBonus}
                         onChange={(e) => setLoginBonus(e.target.value)}
@@ -302,13 +302,13 @@ const Setting = (props) => {
                       )}
                     </div>
                   </div>
-                  <div class="mb-3">
-                    <label for="videoSecond" class="form-label">
+                  <div className="mb-3">
+                    <label htmlFor="videoSecond" className="form-label">
                       Maximum Seconds for Video
                     </label>
                     <input
                       type="number"
-                      class="form-control"
+                      className="form-control"
                       id="videoSecond"
                       value={maxSecondForVideo}
                       onChange={(e) => setMaxSecondForVideo(e.target.value)}
@@ -328,7 +328,7 @@ const Setting = (props) => {
                   <div className="d-flex justify-content-end">
                     <button
                       type="button"
-                      class="btn btn-danger "
+                      className="btn btn-danger "
                       onClick={handleSubmit}
                     >
                       Submit
@@ -339,19 +339,19 @@ const Setting = (props) => {
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-12">
-          <div class="card">
-            <div class="card-body">
-              <div class="row">
-                <h5 class="card-title d-flex justify-content-between mb-3">
+        <div className="col-md-6 col-12">
+          <div className="card">
+            <div className="card-body">
+              <div className="row">
+                <h5 className="card-title d-flex justify-content-between mb-3">
                   Is App Active
-                  <label class="switch">
+                  <label className="switch">
                     <input
                       type="checkbox"
                       checked={isAppActive}
                       onChange={() => handleSwitch_("app active")}
                     />
-                    <span class="slider">
+                    <span className="slider">
                       <p
                         style={{
                           fontSize: 12,
@@ -367,25 +367,25 @@ const Setting = (props) => {
                 </h5>
 
                 <form>
-                  <div class="mb-3">
-                    <label for="policyLink" class="form-label">
+                  <div className="mb-3">
+                    <label htmlFor="policyLink" className="form-label">
                       Privacy Policy Link
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="policyLink"
                       value={privacyPolicyLink}
                       onChange={(e) => setPrivacyPolicyLink(e.target.value)}
                     />
                   </div>
-                  <div class="mb-3">
-                    <label for="policyText" class="form-label">
+                  <div className="mb-3">
+                    <label htmlFor="policyText" className="form-label">
                       Privacy Policy Text
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="policyText"
                       value={privacyPolicyText}
                       onChange={(e) => setPrivacyPolicyText(e.target.value)}
@@ -394,7 +394,7 @@ const Setting = (props) => {
                   <div className="d-flex justify-content-end">
                     <button
                       type="button"
-                      class="btn btn-danger "
+                      className="btn btn-danger "
                       onClick={handleSubmit}
                     >
                       Submit
@@ -407,24 +407,24 @@ const Setting = (props) => {
         </div>
       </div>
       <h3 className="mb-3 text-white">Coin Setting</h3>
-      <div class="row">
-        <div class="col-md-6 col-12">
-          <div class="card">
-            <div class="card-body">
-              <div class="row">
-                <h5 class="card-title ">Charges</h5>
+      <div className="row">
+        <div className="col-md-6 col-12">
+          <div className="card">
+            <div className="card-body">
+              <div className="row">
+                <h5 className="card-title ">Charges</h5>
 
                 <form>
                   <div className="row">
                     {/* <div className="col-md-6">
                       {" "}
-                      <div class="mb-3">
-                        <label for="chatCharge" class="form-label">
+                      <div className="mb-3">
+                        <label htmlFor="chatCharge" className="form-label">
                           Chat Charge
                         </label>
                         <input
                           type="number"
-                          class="form-control"
+                          className="form-control"
                           id="chatCharge"
                           value={chatCharge}
                           onChange={(e) => setChatCharge(e.target.value)}
@@ -432,13 +432,13 @@ const Setting = (props) => {
                       </div>
                     </div> */}
                     <div className="col-md-12">
-                      <div class="mb-3">
-                        <label for="callCharge" class="form-label">
+                      <div className="mb-3">
+                        <label htmlFor="callCharge" className="form-label">
                           Call Charge
                         </label>
                         <input
                           type="number"
-                          class="form-control"
+                          className="form-control"
                           id="callCharge"
                           value={callCharge}
                           onChange={(e) => setCallCharge(e.target.value)}
@@ -457,12 +457,12 @@ const Setting = (props) => {
                       </div>
                     </div>
                     <div className="col-md-12">
-                      <div class="mb-3">
-                        <label for="callCharge" class="form-label">
+                      <div className="mb-3">
+                        <label htmlFor="callCharge" className="form-label">
                           Currency
                         </label>
                         <select
-                          class="form-select form-control"
+                          className="form-select form-control"
                           aria-label="Default select example"
                           value={currency}
                           onChange={(e) => {
@@ -482,7 +482,7 @@ const Setting = (props) => {
                   <div className="d-flex justify-content-end">
                     <button
                       type="button"
-                      class="btn btn-danger "
+                      className="btn btn-danger "
                       onClick={handleSubmit}
                     >
                       Submit
@@ -493,19 +493,19 @@ const Setting = (props) => {
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-12">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Coin Setup</h5>
+        <div className="col-md-6 col-12">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">Coin Setup</h5>
               <form>
-                <div class="mb-3 row">
+                <div className="mb-3 row">
                   <div className="col-5">
-                    <label for="rCoin" class="form-label">
+                    <label htmlFor="rCoin" className="form-label">
                       RCoin Rate (for cash out)
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="rCoin"
                       value={
                         currency === "$"
@@ -518,12 +518,12 @@ const Setting = (props) => {
                   </div>
                   <div className="col-1 mt-5">=</div>
                   <div className="col-6">
-                    <label for="rCoin" class="form-label">
+                    <label htmlFor="rCoin" className="form-label">
                       How Many PCoin
                     </label>
                     <input
                       type="number"
-                      class="form-control"
+                      className="form-control"
                       id="rCoin"
                       value={rCoinForCaseOut}
                       onChange={(e) => setRCoinForCaseOut(e.target.value)}
@@ -541,14 +541,14 @@ const Setting = (props) => {
                     )}
                   </div>
                 </div>
-                <div class="mb-3 row">
+                <div className="mb-3 row">
                   <div className="col-5">
-                    <label for="rCoin" class="form-label">
+                    <label htmlFor="rCoin" className="form-label">
                       Diamond
                     </label>
                     <input
                       type="number"
-                      class="form-control"
+                      className="form-control"
                       id="diamond"
                       value={diamond}
                       onChange={(e) => setDiamond(e.target.value)}
@@ -565,12 +565,12 @@ const Setting = (props) => {
                   </div>
                   <div className="col-1 mt-5">=</div>
                   <div className="col-6">
-                    <label for="rCoin" class="form-label">
+                    <label htmlFor="rCoin" className="form-label">
                       How Many PCoin
                     </label>
                     <input
                       type="number"
-                      class="form-control"
+                      className="form-control"
                       id="rCoin"
                       value={rCoinForDiamond}
                       onChange={(e) => setRCoinForDiamond(e.target.value)}
@@ -592,7 +592,7 @@ const Setting = (props) => {
               <div className="d-flex justify-content-end">
                 <button
                   type="button"
-                  class="btn btn-danger "
+                  className="btn btn-danger "
                   onClick={handleSubmit}
                 >
                   Submit
@@ -603,20 +603,20 @@ const Setting = (props) => {
         </div>
       </div>
       <h3 className="mb-3 text-white">Payment Setting</h3>
-      <div class="row">
-        <div class="col-md-6 col-12">
-          <div class="card">
-            <div class="card-body">
-              <div class="row">
-                <h5 class="card-title d-flex justify-content-between">
+      <div className="row">
+        <div className="col-md-6 col-12">
+          <div className="card">
+            <div className="card-body">
+              <div className="row">
+                <h5 className="card-title d-flex justify-content-between">
                   Google Play
-                  <label class="switch">
+                  <label className="switch">
                     <input
                       type="checkbox"
                       checked={googlePlaySwitch}
                       onChange={() => handleSwitch_("googlePlay")}
                     />
-                    <span class="slider">
+                    <span className="slider">
                       <p
                         style={{
                           fontSize: 12,
@@ -632,25 +632,25 @@ const Setting = (props) => {
                 </h5>
 
                 <form>
-                  <div class="mb-3">
-                    <label for="googlePlayEmail" class="form-label">
+                  <div className="mb-3">
+                    <label htmlFor="googlePlayEmail" className="form-label">
                       Google Play Email
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="googlePlayEmail"
                       value={googlePlayEmail}
                       onChange={(e) => setGooglePlayEmail(e.target.value)}
                     />
                   </div>
-                  <div class="mb-3">
-                    <label for="key" class="form-label">
+                  <div className="mb-3">
+                    <label htmlFor="key" className="form-label">
                       Key
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="key"
                       value={googlePlayKey}
                       onChange={(e) => setGooglePlayKey(e.target.value)}
@@ -659,7 +659,7 @@ const Setting = (props) => {
                   <div className="d-flex justify-content-end">
                     <button
                       type="button"
-                      class="btn btn-danger "
+                      className="btn btn-danger "
                       onClick={handleSubmit}
                     >
                       Submit
@@ -667,33 +667,33 @@ const Setting = (props) => {
                   </div>
                 </form>
               </div>
-              <div class="row">
-                <h5 class="card-title d-flex justify-content-between mt-3">
+              <div className="row">
+                <h5 className="card-title d-flex justify-content-between mt-3">
                   Bkash
 
                 </h5>
 
                 <form>
-                  <div class="mb-3">
-                    <label for="googlePlayEmail" class="form-label">
+                  <div className="mb-3">
+                    <label htmlFor="googlePlayEmail" className="form-label">
                       Bkash Personal
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="bkashPersonal"
                       value={bkashPersonal}
                       onChange={(e) => setBkashPersonal(e.target.value)}
                     />
                   </div>
 
-                  <div class="mb-3">
-                    <label for="googlePlayEmail" class="form-label">
+                  <div className="mb-3">
+                    <label htmlFor="googlePlayEmail" className="form-label">
                       Bkash Agent
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="bkashAgent"
                       value={bkashAgent}
                       onChange={(e) => setBkashAgent(e.target.value)}
@@ -703,7 +703,7 @@ const Setting = (props) => {
                   <div className="d-flex justify-content-end">
                     <button
                       type="button"
-                      class="btn btn-danger "
+                      className="btn btn-danger "
                       onClick={handleSubmit}
                     >
                       Submit
@@ -714,18 +714,18 @@ const Setting = (props) => {
             </div>
           </div>
         </div>
-        <div class="col-md-6 col-12">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title d-flex justify-content-between">
+        <div className="col-md-6 col-12">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title d-flex justify-content-between">
                 Stripe
-                <label class="switch">
+                <label className="switch">
                   <input
                     type="checkbox"
                     checked={stripeSwitch}
                     onChange={() => handleSwitch_("stripe")}
                   />
-                  <span class="slider">
+                  <span className="slider">
                     <p
                       style={{
                         fontSize: 12,
@@ -740,25 +740,25 @@ const Setting = (props) => {
                 </label>
               </h5>
               <form>
-                <div class="mb-3">
-                  <label for="publishableKey" class="form-label">
+                <div className="mb-3">
+                  <label htmlFor="publishableKey" className="form-label">
                     Publishable Key
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     id="publishableKey"
                     value={stripePublishableKey}
                     onChange={(e) => setStripePublishableKey(e.target.value)}
                   />
                 </div>
-                <div class="mb-3">
-                  <label for="secretKey" class="form-label">
+                <div className="mb-3">
+                  <label htmlFor="secretKey" className="form-label">
                     Secret Key
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     id="secretKey"
                     value={stripeSecretKey}
                     onChange={(e) => setStripeSecretKey(e.target.value)}
@@ -768,7 +768,7 @@ const Setting = (props) => {
               <div className="d-flex justify-content-end">
                 <button
                   type="button"
-                  class="btn btn-danger "
+                  className="btn btn-danger "
                   onClick={handleSubmit}
                 >
                   Submit
@@ -781,31 +781,31 @@ const Setting = (props) => {
       <div className="row">
         <div className="col-md-6">
           <h3 className="mb-3 text-white">Agora Setting</h3>
-          <div class="row">
-            <div class="col-md-12 col-12">
-              <div class="card">
-                <div class="card-body">
-                  <div class="row">
+          <div className="row">
+            <div className="col-md-12 col-12">
+              <div className="card">
+                <div className="card-body">
+                  <div className="row">
                     <form>
-                      <div class="mb-3">
-                        <label for="googlePlayEmail" class="form-label">
+                      <div className="mb-3">
+                        <label htmlFor="googlePlayEmail" className="form-label">
                           Agora Key
                         </label>
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="googlePlayEmail"
                           value={agoraKey}
                           onChange={(e) => setAgoraKey(e.target.value)}
                         />
                       </div>
-                      <div class="mb-3">
-                        <label for="key" class="form-label">
+                      <div className="mb-3">
+                        <label htmlFor="key" className="form-label">
                           Agora Certificates
                         </label>
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="key"
                           value={agoraCertificate}
                           onChange={(e) => setAgoraCertificate(e.target.value)}
@@ -814,7 +814,7 @@ const Setting = (props) => {
                       <div className="d-flex justify-content-end">
                         <button
                           type="button"
-                          class="btn btn-danger "
+                          className="btn btn-danger "
                           onClick={handleSubmit}
                         >
                           Submit
@@ -829,14 +829,14 @@ const Setting = (props) => {
         </div>
         <div className="col-md-6">
           <h3 className="mb-3 text-white">Redeem Setting</h3>
-          <div class="row">
-            <div class="col-md-12 col-12">
-              <div class="card">
-                <div class="card-body">
-                  <div class="row">
+          <div className="row">
+            <div className="col-md-12 col-12">
+              <div className="card">
+                <div className="card-body">
+                  <div className="row">
                     <form>
-                      <div class="mb-3">
-                        <label for="googlePlayEmail" class="form-label">
+                      <div className="mb-3">
+                        <label htmlFor="googlePlayEmail" className="form-label">
                           Payment Gateway
                         </label>
                         <Multiselect
@@ -848,13 +848,13 @@ const Setting = (props) => {
                         />
                       </div>
 
-                      <div class="mb-3">
-                        <label for="minRCoinForCaseOut" class="form-label">
+                      <div className="mb-3">
+                        <label htmlFor="minRCoinForCaseOut" className="form-label">
                           Minimum RCoin for cash out
                         </label>
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="minRCoinForCaseOut"
                           value={minRCoinForCaseOut}
                           onChange={(e) =>
@@ -876,7 +876,7 @@ const Setting = (props) => {
                       <div className="d-flex justify-content-end">
                         <button
                           type="button"
-                          class="btn btn-danger "
+                          className="btn btn-danger "
                           onClick={handleSubmit}
                         >
                           Submit

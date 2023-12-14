@@ -202,9 +202,9 @@ const UserHistory = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="card" id="card">
+      <div className="row">
+        <div className="col">
+          <div className="card" id="card">
             <div className="card-header pb-0">
               <div className="row my-3">
                 <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12 float-left mb-xl-3 mb-5">
@@ -383,7 +383,7 @@ const UserHistory = (props) => {
                 </div>
               </div>
             </div>
-            <div class="card-body card-overflow pt-0">
+            <div className="card-body card-overflow pt-0">
               {(historyType === "diamond" || historyType === "rCoin") && (
                 <>
                   <div className="d-flex justify-content-between mt-3">
@@ -401,7 +401,7 @@ const UserHistory = (props) => {
                       </span>
                     </span>
                   </div>
-                  <table class="table table-striped mt-5">
+                  <table className="table table-striped mt-5">
                     <thead>
                       <tr>
                         <th>No</th>
@@ -622,7 +622,7 @@ const UserHistory = (props) => {
                       <span className="text-info">&nbsp;{totalCallCharge}</span>
                     </span>
                   </div>
-                  <table class="table table-striped mt-5">
+                  <table className="table table-striped mt-5">
                     <thead>
                       <tr>
                         <th>No</th>
@@ -787,7 +787,7 @@ const UserHistory = (props) => {
                       </span>
                     </span>
                   </div>
-                  <table class="table table-striped mt-5">
+                  <table className="table table-striped mt-5">
                     <thead>
                       <tr>
                         <th>No</th>

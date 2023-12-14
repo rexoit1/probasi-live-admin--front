@@ -190,162 +190,162 @@ const Dashboard = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-12 col-md-2 col-sm-12">
-          <div class="row">
-            <div class="col-lg-3">
-              <div class="card stats-card">
+      <div className="row">
+        <div className="col-lg-12 col-md-2 col-sm-12">
+          <div className="row">
+            <div className="col-lg-3">
+              <div className="card stats-card">
                 <div
-                  class="card-body pointer-cursor"
+                  className="card-body pointer-cursor"
                   
                   onClick={() => handleAnalytic("user")}
                 >
-                  <div class="stats-info">
-                    <h5 class="card-title">
+                  <div className="stats-info">
+                    <h5 className="card-title">
                       {dashboard.totalUser ? dashboard.totalUser : 0}
-                      {/* <span class="stats-change stats-change-danger">-8%</span> */}
+                      {/* <span className="stats-change stats-change-danger">-8%</span> */}
                     </h5>
-                    <p class="stats-text">Total User</p>
+                    <p className="stats-text">Total User</p>
                   </div>
-                  <div class="stats-icon change-danger">
-                    <i class="material-icons">people_alt</i>
+                  <div className="stats-icon change-danger">
+                    <i className="material-icons">people_alt</i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
-              <div class="card stats-card">
+            <div className="col-lg-3">
+              <div className="card stats-card">
                 <div
-                  class="card-body pointer-cursor"
+                  className="card-body pointer-cursor"
                   onClick={() => handleAnalytic("LIVE USER")}
                 >
-                  <div class="stats-info">
-                    <h5 class="card-title">
+                  <div className="stats-info">
+                    <h5 className="card-title">
                       {dashboard.liveUser ? dashboard.liveUser : 0}
-                      {/* <span class="stats-change stats-change-danger">-8%</span> */}
+                      {/* <span className="stats-change stats-change-danger">-8%</span> */}
                     </h5>
-                    <p class="stats-text">Total Live User</p>
+                    <p className="stats-text">Total Live User</p>
                   </div>
-                  <div class="stats-icon change-success">
-                    <i class="material-icons">perm_identity</i>
+                  <div className="stats-icon change-success">
+                    <i className="material-icons">perm_identity</i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
-              <div class="card stats-card">
+            <div className="col-lg-3">
+              <div className="card stats-card">
                 <div
-                  class="card-body pointer-cursor"
+                  className="card-body pointer-cursor"
                   onClick={() => handleAnalytic("ACTIVE USER")}
                 >
-                  <div class="stats-info">
-                    <h5 class="card-title">
+                  <div className="stats-info">
+                    <h5 className="card-title">
                       {dashboard.activeUser ? dashboard.activeUser : 0}
                     </h5>
-                    <p class="stats-text">Total Active User</p>
+                    <p className="stats-text">Total Active User</p>
                   </div>
-                  <div class="stats-icon change-pink">
-                    <i class="material-icons">group</i>
+                  <div className="stats-icon change-pink">
+                    <i className="material-icons">group</i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
-              <div class="card stats-card">
+            <div className="col-lg-3">
+              <div className="card stats-card">
                 <div
-                  class="card-body pointer-cursor"
+                  className="card-body pointer-cursor"
                   onClick={() => handleAnalytic("VIP")}
                 >
-                  <div class="stats-info">
-                    <h5 class="card-title">
+                  <div className="stats-info">
+                    <h5 className="card-title">
                       {dashboard.vipUser ? dashboard.vipUser : 0}
                     </h5>
-                    <p class="stats-text">Total VIP User</p>
+                    <p className="stats-text">Total VIP User</p>
                   </div>
-                  <div class="stats-icon change-danger">
-                    <i class="material-icons">settings_accessibility</i>
+                  <div className="stats-icon change-danger">
+                    <i className="material-icons">settings_accessibility</i>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-lg-12 col-md-2 col-sm-12">
-          <div class="row">
-            <div class="col-lg-3">
-              <div class="card stats-card">
+        <div className="col-lg-12 col-md-2 col-sm-12">
+          <div className="row">
+            <div className="col-lg-3">
+              <div className="card stats-card">
                 <div
-                  class="card-body pointer-cursor"
+                  className="card-body pointer-cursor"
                   onClick={() => handleAnalytic("REVENUE")}
                 >
-                  <div class="stats-info">
-                    <h5 class="card-title">
+                  <div className="stats-info">
+                    <h5 className="card-title">
                       {dashboard.revenue
                         ? setting.currency === "$"
                           ? dashboard.revenue?.dollar
                           : dashboard.revenue?.rupee
                         : 0}
                       {setting.currency}
-                      {/* <span class="stats-change stats-change-danger">-8%</span> */}
+                      {/* <span className="stats-change stats-change-danger">-8%</span> */}
                     </h5>
-                    <p class="stats-text">Total revenue</p>
+                    <p className="stats-text">Total revenue</p>
                   </div>
-                  <div class="stats-icon change-success">
-                    <i class="material-icons">account_balance_wallet</i>
+                  <div className="stats-icon change-success">
+                    <i className="material-icons">account_balance_wallet</i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
-              <div class="card stats-card">
+            <div className="col-lg-3">
+              <div className="card stats-card">
                 <div
-                  class="card-body pointer-cursor"
+                  className="card-body pointer-cursor"
                   onClick={() => handleAnalytic("POST")}
                 >
-                  <div class="stats-info">
-                    <h5 class="card-title">
+                  <div className="stats-info">
+                    <h5 className="card-title">
                       {dashboard.post ? dashboard.post : 0}
                     </h5>
-                    <p class="stats-text">Total Post</p>
+                    <p className="stats-text">Total Post</p>
                   </div>
-                  <div class="stats-icon change-pink">
-                    <i class="material-icons">post_add</i>
+                  <div className="stats-icon change-pink">
+                    <i className="material-icons">post_add</i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
-              <div class="card stats-card">
+            <div className="col-lg-3">
+              <div className="card stats-card">
                 <div
-                  class="card-body pointer-cursor"
+                  className="card-body pointer-cursor"
                   onClick={() => handleAnalytic("VIDEO")}
                 >
-                  <div class="stats-info">
-                    <h5 class="card-title">
+                  <div className="stats-info">
+                    <h5 className="card-title">
                       {dashboard.video ? dashboard.video : 0}
                     </h5>
-                    <p class="stats-text">Total Video</p>
+                    <p className="stats-text">Total Video</p>
                   </div>
-                  <div class="stats-icon change-danger">
-                    <i class="material-icons">voice_chat</i>
+                  <div className="stats-icon change-danger">
+                    <i className="material-icons">voice_chat</i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-3">
-              <div class="card stats-card">
+            <div className="col-lg-3">
+              <div className="card stats-card">
                 <div
-                  class="card-body pointer-cursor"
+                  className="card-body pointer-cursor"
                   onClick={() => handleAnalytic("REPORT")}
                 >
-                  <div class="stats-info">
-                    <h5 class="card-title">
+                  <div className="stats-info">
+                    <h5 className="card-title">
                       {dashboard.report ? dashboard.report : 0}
                     </h5>
-                    <p class="stats-text">Total Report User</p>
+                    <p className="stats-text">Total Report User</p>
                   </div>
-                  <div class="stats-icon change-success">
-                    <i class="material-icons">next_plan</i>
+                  <div className="stats-icon change-success">
+                    <i className="material-icons">next_plan</i>
                   </div>
                 </div>
               </div>
@@ -357,12 +357,12 @@ const Dashboard = (props) => {
       {/* chart */}
       <h4 className="text-white">{type}</h4>
       {type === "ACTIVE USER" ? (
-        <div class="pie mt-3">
+        <div className="pie mt-3">
           <Doughnut data={pieChartData} options={{ responsive: true }} />
         </div>
       ) : type === "REVENUE" ? (
         data.length > 1 ? (
-          <div class="pie mt-3">
+          <div className="pie mt-3">
             <div className="d-flex justify-content-end">
               <DateRangePicker
                 initialSettings={{
@@ -379,7 +379,7 @@ const Dashboard = (props) => {
               >
                 <input
                   type="text"
-                  class="form-control float-left"
+                  className="form-control float-left"
                   placeholder="Select Date"
                   style={{ width: 180, fontWeight: 700 }}
                 />
@@ -391,7 +391,7 @@ const Dashboard = (props) => {
           <p className="text-center">Chart not Available</p>
         )
       ) : data.length > 1 ? (
-        <div class="rows mt-3">
+        <div className="rows mt-3">
           <div className="d-flex justify-content-end">
             <DateRangePicker
               initialSettings={{
@@ -408,7 +408,7 @@ const Dashboard = (props) => {
             >
               <input
                 type="text"
-                class="form-control float-left"
+                className="form-control float-left"
                 placeholder="Select Date"
                 style={{ width: 180, fontWeight: 700 }}
               />

@@ -26,22 +26,22 @@ const ForgotPassword = (props) => {
 
   return (
     <>
-      <div class="login-page back__style">
-        <div class="container">
-          <div class="row justify-content-md-center">
-            <div class="col-md-12 col-lg-4">
-              <div class="card login-box-container">
-                <div class="card-body">
-                  <div class="authent-text">
-                    <p class="text-danger mb-4 h5">Forgot Password</p>
+      <div className="login-page back__style">
+        <div className="container">
+          <div className="row justify-content-md-center">
+            <div className="col-md-12 col-lg-4">
+              <div className="card login-box-container">
+                <div className="card-body">
+                  <div className="authent-text">
+                    <p className="text-danger mb-4 h5">Forgot Password</p>
                     <p>If you have forgotten your password you can reset it here!</p>
                   </div>
                   <form autoComplete="off">
-                    <div class="mb-3">
-                      <div class="form-floating">
+                    <div className="mb-3">
+                      <div className="form-floating">
                         <input
                           type="email"
-                          class="form-control"
+                          className="form-control"
                           id="floatingInput"
                           placeholder="name@example.com"
                           value={email}
@@ -54,11 +54,11 @@ const ForgotPassword = (props) => {
                             }
                           }}
                         />
-                        <label for="floatingPassword">Email</label>
+                        <label htmlFor="floatingPassword">Email</label>
                       </div>
-                      <div class="mt-2 ml-2 mb-3">
+                      <div className="mt-2 ml-2 mb-3">
                         {error.email && (
-                          <div class="pl-1 text-left pb-1">
+                          <div className="pl-1 text-left pb-1">
                             <span className="text-red font-size-lg">
                               {error.email}
                             </span>
@@ -66,11 +66,11 @@ const ForgotPassword = (props) => {
                         )}
                       </div>
                     </div>
-                    <div class="d-grid">
-                      <button type="submit" class="btn btn-danger m-b-xs" onClick={handleSubmit}>
+                    <div className="d-grid">
+                      <button type="submit" className="btn btn-danger m-b-xs" onClick={handleSubmit}>
                         Send
                       </button>
-                      <Link to="/"><p class="text-info mt-2"><i class="fas fa-arrow-left"></i>&nbsp;&nbsp;Take me back to Login!</p></Link>
+                      <Link to="/"><p className="text-info mt-2"><i className="fas fa-arrow-left"></i>&nbsp;&nbsp;Take me back to Login!</p></Link>
                     </div>
                   </form>
                 </div>

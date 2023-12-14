@@ -101,7 +101,7 @@ const GiftCategoryTable = (props) => {
           </div>
         </div>
       </div>
-      <div class="main-wrapper">
+      <div className="main-wrapper">
         <div className="row">
           <div className="col-xs-12 col-sm-12 col-md-6 col-lg-8 float-left">
             <button
@@ -134,13 +134,13 @@ const GiftCategoryTable = (props) => {
             </form>
           </div>
         </div>
-        <div class="row">
+        <div className="row">
           {data.length > 0 ? (
             data.map((data, index) => {
               return (
-                <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4" key={index}>
-                  <div class="card contact-card card-bg pointer-cursor">
-                    <div class="card-body text-center">
+                <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4" key={index}>
+                  <div className="card contact-card card-bg pointer-cursor">
+                    <div className="card-body text-center">
                       <img
                         src={data.image ? baseURL + data.image : noImage}
                         alt=""
@@ -156,7 +156,7 @@ const GiftCategoryTable = (props) => {
                       />
 
                       <div
-                        class="contact-card-info"
+                        className="contact-card-info"
                         onClick={() => openGifts(data)}
                       >
                         <h6>{data.name}</h6>
@@ -164,20 +164,20 @@ const GiftCategoryTable = (props) => {
                           {data.giftCount ? data.giftCount : "0"} Gifts
                         </span>
                       </div>
-                      <div class="contact-card-buttons">
+                      <div className="contact-card-buttons">
                         <button
                           type="button"
-                          class="btn btn-circle btn-primary m-b-xs"
+                          className="btn btn-circle btn-primary m-b-xs"
                           onClick={() => handleEdit(data)}
                         >
-                          <i class="fas fa-edit"></i>
+                          <i className="fas fa-edit"></i>
                         </button>
                         <button
                           type="button"
-                          class="btn btn-circle btn-danger m-b-xs"
+                          className="btn btn-circle btn-danger m-b-xs"
                           onClick={() => handleDelete(data._id)}
                         >
-                          <i class="fas fa-trash"></i>
+                          <i className="fas fa-trash"></i>
                         </button>
                       </div>
                     </div>

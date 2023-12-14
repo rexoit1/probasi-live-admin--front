@@ -146,11 +146,11 @@ const GiftPage = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="card-body card-overflow">
-              <div class="d-sm-flex align-items-center justify-content-between mb-4"></div>
+      <div className="row">
+        <div className="col">
+          <div className="card">
+            <div className="card-body card-overflow">
+              <div className="d-sm-flex align-items-center justify-content-between mb-4"></div>
 
               <form>
                 <div className="row">
@@ -204,7 +204,7 @@ const GiftPage = (props) => {
                       ) : (
                         <>
                           <select
-                            class="form-select form-control"
+                            className="form-select form-control"
                             aria-label="Default select example"
                             value={category}
                             onChange={(e) => {
@@ -252,7 +252,7 @@ const GiftPage = (props) => {
 
                 <div className="row mt-4">
                   <div className="col-lg-2">
-                    <label className="form-control-label" for="input-username">
+                    <label className="form-control-label" htmlFor="input-username">
                       Select (Multiple) Image or GIF
                     </label>
 
@@ -319,7 +319,7 @@ const GiftPage = (props) => {
                                   }}
                                 />
                                 <div
-                                  class="img-container"
+                                  className="img-container"
                                   style={{
                                     display: "inline",
                                     position: "relative",
@@ -327,7 +327,7 @@ const GiftPage = (props) => {
                                   }}
                                 >
                                   <i
-                                    class="fas fa-times-circle text-danger"
+                                    className="fas fa-times-circle text-danger"
                                     style={{
                                       position: "absolute",
                                       right: "10px",

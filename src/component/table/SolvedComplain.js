@@ -111,9 +111,9 @@ const PendingComplainTable = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="card">
+      <div className="row">
+        <div className="col">
+          <div className="card">
             <div className="card-header pb-0">
               <div className="row my-3">
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-8 float-left"></div>
@@ -137,10 +137,10 @@ const PendingComplainTable = (props) => {
                 </div>
               </div>
             </div>
-            <div class="card-body card-overflow">
-              <div class="d-sm-flex align-items-center justify-content-between mb-4"></div>
+            <div className="card-body card-overflow">
+              <div className="d-sm-flex align-items-center justify-content-between mb-4"></div>
 
-              <table class="table table-striped">
+              <table className="table table-striped">
                 <thead className="text-center">
                   <tr>
                     <th>No.</th>

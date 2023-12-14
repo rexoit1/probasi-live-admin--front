@@ -83,11 +83,11 @@ const ReportedUser = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="card-body card-overflow">
-              <table class="table" style={{ borderCollapse: "collapse" }}>
+      <div className="row">
+        <div className="col">
+          <div className="card">
+            <div className="card-body card-overflow">
+              <table className="table" style={{ borderCollapse: "collapse" }}>
                 <thead className="text-center">
                   <tr>
                     <th>No</th>
@@ -114,7 +114,7 @@ const ReportedUser = (props) => {
                           <tr
                             data-toggle="collapse"
                             data-target={`#demo${index}`}
-                            class="accordion-toggle pointer-cursor"
+                            className="accordion-toggle pointer-cursor"
                           >
                             <td>{index + 1}</td>
                             <td>
@@ -137,19 +137,19 @@ const ReportedUser = (props) => {
                               />
                             </td>
                             <td>{data._id.name}</td>
-                            <td class="text-success">{data._id.diamond}</td>
-                            <td class="text-warning">{data._id.rCoin}</td>
-                            <td class="text-info">{data._id.country ? data?._id?.country : "-"}</td>
-                            <td class="text-danger">{data.count}</td>
+                            <td className="text-success">{data._id.diamond}</td>
+                            <td className="text-warning">{data._id.rCoin}</td>
+                            <td className="text-info">{data._id.country ? data?._id?.country : "-"}</td>
+                            <td className="text-danger">{data.count}</td>
                             <td className="pointer-cursor">
                               <i className="fas fa-info-circle fa-lg"></i>
                             </td>
                           </tr>
                           <tr>
-                            <td colspan="8" class="hiddenRow">
+                            <td colspan="8" className="hiddenRow">
                               <div
                                 id={`demo${index}`}
-                                class="accordian-body collapse"
+                                className="accordian-body collapse"
                               >
                                 <h6 className="text-danger">
                                   Report User Detail
@@ -199,13 +199,13 @@ const ReportedUser = (props) => {
                                               />
                                             </td>
                                             <td>{report?.toUserId?.name}</td>
-                                            <td class="text-success">
+                                            <td className="text-success">
                                               {report?.toUserId?.diamond}
                                             </td>
-                                            <td class="text-warning">
+                                            <td className="text-warning">
                                               {report?.toUserId?.rCoin}
                                             </td>
-                                            <td class="text-info">
+                                            <td className="text-info">
                                               {report?.toUserId?.country ? report.toUserId?.country : "-"}
                                             </td>
                                             <td>{report?.description}</td>

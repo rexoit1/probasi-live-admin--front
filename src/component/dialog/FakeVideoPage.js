@@ -188,11 +188,11 @@ const FakeVideoPage = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="card-body card-overflow">
-              <div class="d-sm-flex align-items-center justify-content-between mb-4"></div>
+      <div className="row">
+        <div className="col">
+          <div className="card">
+            <div className="card-body card-overflow">
+              <div className="d-sm-flex align-items-center justify-content-between mb-4"></div>
 
               <form>
                 <div className="row">
@@ -202,7 +202,7 @@ const FakeVideoPage = (props) => {
 
                       <>
                         <select
-                          class="form-select form-control"
+                          className="form-select form-control"
                           aria-label="Default select example"
                           value={user_}
                           onChange={(e) => {
@@ -245,9 +245,9 @@ const FakeVideoPage = (props) => {
                   </div>
                   <div className="col-md-6 d-flex justify-content-start mt-5">
                     <label className="mb-2 text-gray">Show Video : </label>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="show"
                         id="public"
@@ -257,13 +257,13 @@ const FakeVideoPage = (props) => {
                           setShow(e.target.value);
                         }}
                       />
-                      <label class="form-check-label" for="public">
+                      <label className="form-check-label" htmlFor="public">
                         Public
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="show"
                         id="private"
@@ -273,7 +273,7 @@ const FakeVideoPage = (props) => {
                           setShow(e.target.value);
                         }}
                       />
-                      <label class="form-check-label" for="private">
+                      <label className="form-check-label" htmlFor="private">
                         Private
                       </label>
                     </div>
@@ -498,9 +498,9 @@ const FakeVideoPage = (props) => {
                 <div className="row mt-4">
                   <div className="col-md-6 d-flex justify-content-start">
                     <label className="mb-2 text-gray">Video Type : </label>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="videoType"
                         id="video"
@@ -510,13 +510,13 @@ const FakeVideoPage = (props) => {
                         }}
                         checked={videoType == "1" ? true : false}
                       />
-                      <label class="form-check-label" for="video">
+                      <label className="form-check-label" htmlFor="video">
                         Video
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="videoType"
                         id="linkVideo"
@@ -526,7 +526,7 @@ const FakeVideoPage = (props) => {
                           setVideoType(e.target.value);
                         }}
                       />
-                      <label class="form-check-label" for="linkVideo">
+                      <label className="form-check-label" htmlFor="linkVideo">
                         Link
                       </label>
                     </div>

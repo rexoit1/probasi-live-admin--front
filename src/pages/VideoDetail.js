@@ -96,23 +96,23 @@ const VideoDetail = (props) => {
         </div>
       </div>
 
-      <div class="card card-bg">
-        <div class="card-body">
-          <div class="row">
-            <div class="col-md-12 col-lg-5">
-              <div class="post">
+      <div className="card card-bg">
+        <div className="card-body">
+          <div className="row">
+            <div className="col-md-12 col-lg-5">
+              <div className="post">
                 <div
-                  class="post-header pointer-cursor"
+                  className="post-header pointer-cursor"
                   onClick={() => handleUserInfo(detail?.userId)}
                 >
                   <img
                     src={detail?.userId?.image ? detail?.userId?.image : Male}
                     alt=""
                   />
-                  <div class="post-info">
-                    <span class="post-author">{detail?.userId?.username}</span>
+                  <div className="post-info">
+                    <span className="post-author">{detail?.userId?.username}</span>
                     <br />
-                    <span class="post-date">
+                    <span className="post-date">
                       {now.diff(detail?.date, "minute") <= 60 &&
                       now.diff(detail?.date, "minute") >= 0
                         ? now.diff(detail?.date, "minute") + " minutes ago"
@@ -122,21 +122,21 @@ const VideoDetail = (props) => {
                     </span>
                   </div>
                 </div>
-                <div class="post-body">
+                <div className="post-body">
                   <p>{detail?.userId?.caption}</p>
                   <video
                     controls
                     src={baseURL + detail?.video}
-                    class="post-image"
+                    className="post-image"
                     alt=""
                   />
                 </div>
                 <div id="myGroup">
-                  <div class="post-actions">
-                    <ul class="list-unstyled">
+                  <div className="post-actions">
+                    <ul className="list-unstyled">
                       <li>
                         <a
-                          class="like-btn"
+                          className="like-btn"
                           data-toggle="collapse"
                           href="#collapseExample"
                           role="button"
@@ -148,7 +148,7 @@ const VideoDetail = (props) => {
                       </li>
                       <li>
                         <a
-                          class="like-btn"
+                          className="like-btn"
                           data-toggle="collapse"
                           href="#collapseComment"
                           role="button"
@@ -160,27 +160,27 @@ const VideoDetail = (props) => {
                       </li>
                     </ul>
                   </div>
-                  <div class="post-comments">
+                  <div className="post-comments">
                     <div
-                      class="collapse"
+                      className="collapse"
                       id="collapseExample"
                       data-parent="#myGroup"
                       style={{ maxHeight: 250, overflow: "auto" }}
                     >
-                      <div class="row">
-                        <div class="col-12">
+                      <div className="row">
+                        <div className="col-12">
                           {like?.length > 0 ? (
                             like.map((like) => {
                               return (
-                                <div class="post-comm post-padding">
+                                <div className="post-comm post-padding">
                                   <img
                                     src={like.image ? like.image : Male}
-                                    class="comment-img"
+                                    className="comment-img"
                                     alt=""
                                     onClick={() => handleUserInfo(like.user)}
                                   />
-                                  <div class="comment-container">
-                                    <span class="comment-author pointer-cursor">
+                                  <div className="comment-container">
+                                    <span className="comment-author pointer-cursor">
                                       <span
                                         onClick={() =>
                                           handleUserInfo(like.user)
@@ -188,7 +188,7 @@ const VideoDetail = (props) => {
                                       >
                                         {like.name}
                                       </span>
-                                      <small class="comment-date">
+                                      <small className="comment-date">
                                         {like.time}
                                       </small>
                                     </span>
@@ -203,25 +203,25 @@ const VideoDetail = (props) => {
                       </div>
                     </div>
                     <div
-                      class="collapse"
+                      className="collapse"
                       id="collapseComment"
                       data-parent="#myGroup"
                       style={{ maxHeight: 250, overflow: "auto" }}
                     >
-                      <div class="row">
-                        <div class="col-12">
+                      <div className="row">
+                        <div className="col-12">
                           {comment?.length > 0 ? (
                             comment.map((comment, index) => {
                               return (
-                                <div class="post-comm post-padding">
+                                <div className="post-comm post-padding">
                                   <img
                                     src={comment.image ? comment.image : Male}
-                                    class="comment-img commentImg"
+                                    className="comment-img commentImg"
                                     alt=""
                                     onClick={() => handleUserInfo(comment.user)}
                                   />
-                                  <div class="comment-container">
-                                    <span class="comment-author pointer-cursor">
+                                  <div className="comment-container">
+                                    <span className="comment-author pointer-cursor">
                                       <span
                                         onClick={() =>
                                           handleUserInfo(comment.user)
@@ -229,7 +229,7 @@ const VideoDetail = (props) => {
                                       >
                                         {comment.name}
                                       </span>
-                                      <small class="comment-date">
+                                      <small className="comment-date">
                                         {comment.time}
                                         <Popconfirm
                                           title="Are you sure to delete this comment?"
@@ -262,8 +262,8 @@ const VideoDetail = (props) => {
               </div>
             </div>
             <div className="col-md-1"></div>
-            <div class="col-md-12 col-lg-6" style={{ overflowX: "auto" }}>
-              <h5 class="card-title">About</h5>
+            <div className="col-md-12 col-lg-6" style={{ overflowX: "auto" }}>
+              <h5 className="card-title">About</h5>
               <hr />
               <table className="table">
                 <tbody>

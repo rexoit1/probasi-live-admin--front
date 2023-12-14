@@ -52,11 +52,11 @@ const Navbar = () => {
   }, []);
   return (
     <>
-      <div class="page-sidebar">
+      <div className="page-sidebar">
         <Link to="/admin/dashboard">
           <span className="logo text-danger">Probashi Live</span>
         </Link>
-        <ul class="list-unstyled accordion-menu">
+        <ul className="list-unstyled accordion-menu">
           <li
             data-bs-toggle="tooltip"
             data-bs-placement="top"
@@ -85,17 +85,17 @@ const Navbar = () => {
                 <i data-feather="users"></i>
               </span>
               User
-              <i class="fas fa-chevron-right dropdown-icon"></i>
+              <i className="fas fa-chevron-right dropdown-icon"></i>
             </a>
-            <ul class="">
+            <ul className="">
               <li>
                 <Link to="/admin/user" className={`${classes.navLink}`}>
-                  <i class="far fa-circle"></i>Real
+                  <i className="far fa-circle"></i>Real
                 </Link>
               </li>
               <li>
                 <Link to="/admin/fakeUser" className={`${classes.navLink}`}>
-                  <i class="far fa-circle"></i>Fake
+                  <i className="far fa-circle"></i>Fake
                 </Link>
               </li>
             </ul>
@@ -126,17 +126,17 @@ const Navbar = () => {
                 <i data-feather="layout"></i>
               </span>
               Plan
-              <i class="fas fa-chevron-right dropdown-icon"></i>
+              <i className="fas fa-chevron-right dropdown-icon"></i>
             </a>
-            <ul class="">
+            <ul className="">
               <li>
                 <Link to="/admin/coinPlan" className={`${classes.navLink}`}>
-                  <i class="far fa-circle"></i>Coin Plan
+                  <i className="far fa-circle"></i>Coin Plan
                 </Link>
               </li>
               <li>
                 <Link to="/admin/vipPlan" className={`${classes.navLink}`}>
-                  <i class="far fa-circle"></i>VIP Plan
+                  <i className="far fa-circle"></i>VIP Plan
                 </Link>
               </li>
             </ul>
@@ -157,15 +157,15 @@ const Navbar = () => {
                 <i data-feather="clock"></i>
               </span>
               Plan History
-              <i class="fas fa-chevron-right dropdown-icon"></i>
+              <i className="fas fa-chevron-right dropdown-icon"></i>
             </a>
-            <ul class="">
+            <ul className="">
               <li>
                 <Link
                   to="/admin/coinPlan/history"
                   className={`${classes.navLink}`}
                 >
-                  <i class="far fa-circle"></i>Coin Plan
+                  <i className="far fa-circle"></i>Coin Plan
                 </Link>
               </li>
               <li>
@@ -173,7 +173,7 @@ const Navbar = () => {
                   to="/admin/vipPlan/history"
                   className={`${classes.navLink}`}
                 >
-                  <i class="far fa-circle"></i>VIP Plan
+                  <i className="far fa-circle"></i>VIP Plan
                 </Link>
               </li>
             </ul>
@@ -194,16 +194,16 @@ const Navbar = () => {
                 <i data-feather="gift"></i>
               </span>
               Gift
-              <i class="fas fa-chevron-right dropdown-icon"></i>
+              <i className="fas fa-chevron-right dropdown-icon"></i>
             </a>
-            <ul class="">
+            <ul className="">
               <li>
                 <Link
                   to="/admin/giftCategory"
                   className={`${classes.navLink}`}
                   onClick={() => localStorage.removeItem("GiftClick")}
                 >
-                  <i class="far fa-circle"></i>Category
+                  <i className="far fa-circle"></i>Category
                 </Link>
               </li>
               <li>
@@ -212,7 +212,7 @@ const Navbar = () => {
                   className={`${classes.navLink}`}
                   onClick={() => localStorage.setItem("GiftClick", true)}
                 >
-                  <i class="far fa-circle"></i>Gift
+                  <i className="far fa-circle"></i>Gift
                 </Link>
               </li>
             </ul>
@@ -299,17 +299,17 @@ const Navbar = () => {
                 <i data-feather="maximize"></i>
               </span>
               Post
-              <i class="fas fa-chevron-right dropdown-icon"></i>
+              <i className="fas fa-chevron-right dropdown-icon"></i>
             </a>
-            <ul class="">
+            <ul className="">
               <li>
                 <Link to="/admin/post" className={`${classes.navLink}`}>
-                  <i class="far fa-circle"></i>Real
+                  <i className="far fa-circle"></i>Real
                 </Link>
               </li>
               <li>
                 <Link to="/admin/post/fake" className={`${classes.navLink}`}>
-                  <i class="far fa-circle"></i>Fake
+                  <i className="far fa-circle"></i>Fake
                 </Link>
               </li>
             </ul>
@@ -330,17 +330,17 @@ const Navbar = () => {
                 <i data-feather="film"></i>
               </span>
               Video
-              <i class="fas fa-chevron-right dropdown-icon"></i>
+              <i className="fas fa-chevron-right dropdown-icon"></i>
             </a>
-            <ul class="">
+            <ul className="">
               <li>
                 <Link to="/admin/video" className={`${classes.navLink}`}>
-                  <i class="far fa-circle"></i>Real
+                  <i className="far fa-circle"></i>Real
                 </Link>
               </li>
               <li>
                 <Link to="/admin/video/fake" className={`${classes.navLink}`}>
-                  <i class="far fa-circle"></i>Fake
+                  <i className="far fa-circle"></i>Fake
                 </Link>
               </li>
             </ul>
@@ -361,17 +361,17 @@ const Navbar = () => {
                 <i data-feather="key"></i>
               </span>
               Transection
-              <i class="fas fa-chevron-right dropdown-icon"></i>
+              <i className="fas fa-chevron-right dropdown-icon"></i>
             </a>
-            <ul class="">
+            <ul className="">
               <li>
                 <Link to="/admin/transcation" className={`${classes.navLink}`}>
-                  <i class="far fa-circle"></i>Pending Transection
+                  <i className="far fa-circle"></i>Pending Transection
                 </Link>
               </li>
               <li>
                 <Link to="/admin/withdraw" className={`${classes.navLink}`}>
-                  <i class="far fa-circle"></i>Withdraw Request
+                  <i className="far fa-circle"></i>Withdraw Request
                 </Link>
               </li>
             </ul>
@@ -401,15 +401,15 @@ const Navbar = () => {
                 <i data-feather="help-circle"></i>
               </span>
               Complain
-              <i class="fas fa-chevron-right dropdown-icon"></i>
+              <i className="fas fa-chevron-right dropdown-icon"></i>
             </a>
-            <ul class="">
+            <ul className="">
               <li>
                 <Link
                   to="/admin/pendingComplain"
                   className={`${classes.navLink}`}
                 >
-                  <i class="far fa-circle"></i>Pending
+                  <i className="far fa-circle"></i>Pending
                 </Link>
               </li>
               <li>
@@ -417,7 +417,7 @@ const Navbar = () => {
                   to="/admin/solvedComplain"
                   className={`${classes.navLink}`}
                 >
-                  <i class="far fa-circle"></i>Solved
+                  <i className="far fa-circle"></i>Solved
                 </Link>
               </li>
             </ul>
@@ -438,15 +438,15 @@ const Navbar = () => {
                 <i data-feather="key"></i>
               </span>
               Redeem
-              <i class="fas fa-chevron-right dropdown-icon"></i>
+              <i className="fas fa-chevron-right dropdown-icon"></i>
             </a>
-            <ul class="">
+            <ul className="">
               <li>
                 <Link
                   to="/admin/pendingRedeem"
                   className={`${classes.navLink}`}
                 >
-                  <i class="far fa-circle"></i>Pending
+                  <i className="far fa-circle"></i>Pending
                 </Link>
               </li>
               <li>
@@ -454,7 +454,7 @@ const Navbar = () => {
                   to="/admin/AcceptedRedeem"
                   className={`${classes.navLink}`}
                 >
-                  <i class="far fa-circle"></i>Accepted
+                  <i className="far fa-circle"></i>Accepted
                 </Link>
               </li>
               <li>
@@ -462,7 +462,7 @@ const Navbar = () => {
                   to="/admin/declineRedeem"
                   className={`${classes.navLink}`}
                 >
-                  <i class="far fa-circle"></i>Declined
+                  <i className="far fa-circle"></i>Declined
                 </Link>
               </li>
             </ul>

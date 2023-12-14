@@ -186,19 +186,19 @@ const FakeLiveStreamingPage = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="card-body card-overflow">
-              <div class="d-sm-flex align-items-center justify-content-between mb-4"></div>
+      <div className="row">
+        <div className="col">
+          <div className="card">
+            <div className="card-body card-overflow">
+              <div className="d-sm-flex align-items-center justify-content-between mb-4"></div>
 
               <form>
                 <div className="row">
                   <div className="col-md-6 d-flex justify-content-start">
                     <label className="mb-2 text-gray">Video Type : </label>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="videoType"
                         id="image"
@@ -208,13 +208,13 @@ const FakeLiveStreamingPage = (props) => {
                         }}
                         checked={type === "1" ? true : false}
                       />
-                      <label class="form-check-label" for="image">
+                      <label className="form-check-label" htmlFor="image">
                         Video
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="videoType"
                         id="link"
@@ -224,7 +224,7 @@ const FakeLiveStreamingPage = (props) => {
                           setType(e.target.value);
                         }}
                       />
-                      <label class="form-check-label" for="link">
+                      <label className="form-check-label" htmlFor="link">
                         Link
                       </label>
                     </div>
@@ -234,7 +234,7 @@ const FakeLiveStreamingPage = (props) => {
                       <label className="text-gray mb-2">user</label>
                       <>
                         <select
-                          class="form-select form-control"
+                          className="form-select form-control"
                           aria-label="Default select example"
                           value={user}
                           onChange={(e) => {
@@ -278,7 +278,7 @@ const FakeLiveStreamingPage = (props) => {
 
                 <div className={type === "1" ? "row mt-4" : "d-none"}>
                   <div className="col-lg-2">
-                    <label className="form-control-label" for="input-username">
+                    <label className="form-control-label" htmlFor="input-username">
                       Select (Multiple) video
                     </label>
 
@@ -351,7 +351,7 @@ const FakeLiveStreamingPage = (props) => {
                                 }}
                               />
                               <div
-                                class="img-container"
+                                className="img-container"
                                 style={{
                                   display: "inline",
                                   position: "relative",
@@ -359,7 +359,7 @@ const FakeLiveStreamingPage = (props) => {
                                 }}
                               >
                                 <i
-                                  class="fas fa-times-circle text-danger"
+                                  className="fas fa-times-circle text-danger"
                                   style={{
                                     position: "absolute",
                                     right: "10px",

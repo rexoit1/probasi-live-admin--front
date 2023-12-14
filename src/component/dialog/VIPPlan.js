@@ -217,7 +217,7 @@ const VIPPlanDialog = (props) => {
                     <div className="form-group">
                       <label className="text-gray mb-2">Validity Type</label>
                       <select
-                        class="form-select form-control"
+                        className="form-select form-control"
                         aria-label="Default select example"
                         value={validityType}
                         onChange={(e) => {

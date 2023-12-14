@@ -181,11 +181,11 @@ const FakeUserPage = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="card-body card-overflow">
-              <div class="d-sm-flex align-items-center justify-content-between mb-4"></div>
+      <div className="row">
+        <div className="col">
+          <div className="card">
+            <div className="card-body card-overflow">
+              <div className="d-sm-flex align-items-center justify-content-between mb-4"></div>
 
               <form>
                 <div className="row">
@@ -231,7 +231,7 @@ const FakeUserPage = (props) => {
                       <>
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           // aria-label="example"
                           value={country}
                           onChange={(e) => {
@@ -354,9 +354,9 @@ const FakeUserPage = (props) => {
                 <div className="row mt-4">
                   <div className="col-md-6 d-flex justify-content-start">
                     <label className="mb-2 text-gray">Image Type : </label>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="imageType"
                         id="image"
@@ -366,13 +366,13 @@ const FakeUserPage = (props) => {
                         }}
                         checked={imageType === "1" ? true : false}
                       />
-                      <label class="form-check-label" for="image">
+                      <label className="form-check-label" htmlFor="image">
                         Image
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="imageType"
                         id="link"
@@ -382,16 +382,16 @@ const FakeUserPage = (props) => {
                           setImageType(e.target.value);
                         }}
                       />
-                      <label class="form-check-label" for="link">
+                      <label className="form-check-label" htmlFor="link">
                         Link
                       </label>
                     </div>
                   </div>
                   <div className="col-md-6 d-flex justify-content-start">
                     <label className="mb-2 text-gray">Gender : </label>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="gender"
                         id="male"
@@ -401,13 +401,13 @@ const FakeUserPage = (props) => {
                           setGender(e.target.value);
                         }}
                       />
-                      <label class="form-check-label" for="male">
+                      <label className="form-check-label" htmlFor="male">
                         Male
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="gender"
                         id="female"
@@ -417,7 +417,7 @@ const FakeUserPage = (props) => {
                           setGender(e.target.value);
                         }}
                       />
-                      <label class="form-check-label" for="female">
+                      <label className="form-check-label" htmlFor="female">
                         Female
                       </label>
                     </div>
@@ -540,9 +540,9 @@ const FakeUserPage = (props) => {
                 <div className="row mt-4">
                   <div className="col-md-6 d-flex justify-content-start">
                     <label className="mb-2 text-gray">Video Type : </label>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="videoType"
                         id="video"
@@ -552,13 +552,13 @@ const FakeUserPage = (props) => {
                         }}
                         checked={videoType === "1" ? true : false}
                       />
-                      <label class="form-check-label" for="video">
+                      <label className="form-check-label" htmlFor="video">
                         Video
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="videoType"
                         id="linkVideo"
@@ -568,7 +568,7 @@ const FakeUserPage = (props) => {
                           setVideoType(e.target.value);
                         }}
                       />
-                      <label class="form-check-label" for="linkVideo">
+                      <label className="form-check-label" htmlFor="linkVideo">
                         Link
                       </label>
                     </div>

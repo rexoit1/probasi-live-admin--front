@@ -140,9 +140,9 @@ const maxDate =new Date()
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="card" id="card">
+      <div className="row">
+        <div className="col">
+          <div className="card" id="card">
             <div className="card-header pb-0">
               <div className="row my-3">
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-8 float-left">
@@ -208,8 +208,8 @@ const maxDate =new Date()
                 </div>
               </div>
             </div>
-            <div class="card-body card-overflow">
-              <table class="table table-striped table-center ">
+            <div className="card-body card-overflow">
+              <table className="table table-striped table-center ">
                 <thead className="text-center">
                   <tr>
                     <th>No.</th>

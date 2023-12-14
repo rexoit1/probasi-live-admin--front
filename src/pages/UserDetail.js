@@ -270,18 +270,18 @@ const UserDetail = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-xl-12">
-          <div class="profile-cover"></div>
-          <div class="profile-header ">
-            <div class="profile-img">
+      <div className="row">
+        <div className="col-xl-12">
+          <div className="profile-cover"></div>
+          <div className="profile-header ">
+            <div className="profile-img">
               <img src={user.image ? user.image : Male} alt="" />
             </div>
-            <div class="profile-name">
+            <div className="profile-name">
               <h3>{user?.name}</h3>
             </div>
-            <div class="profile-header-menu">
-              <ul class="list-unstyled" id="manageVideoFeed">
+            <div className="profile-header-menu">
+              <ul className="list-unstyled" id="manageVideoFeed">
                 <li>
                   <a
                     href={() => false}
@@ -330,18 +330,18 @@ const UserDetail = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-12 col-lg-4">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">About</h5>
+      <div className="row">
+        <div className="col-md-12 col-lg-4">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">About</h5>
               <span className="text-danger">{user.bio ? "Bio : " : ""}</span>
               <span>{user?.bio}</span>
               {user.bio && <br />}
               {user.bio && <br />}
-              <ul class="list-unstyled profile-about-list">
+              <ul className="list-unstyled profile-about-list">
                 <li>
-                  <i class="fal fa-user m-r-xxs"></i>
+                  <i className="fal fa-user m-r-xxs"></i>
                   <span>
                     Username &nbsp;
                     <span className="text-danger">{user?.username}</span>
@@ -349,7 +349,7 @@ const UserDetail = (props) => {
                 </li>
                 <li>
                   <span className="d-flex" style={{ alignItems: "baseline" }}>
-                    <i class="far fa-gem m-r-xxs"></i>
+                    <i className="far fa-gem m-r-xxs"></i>
                     Diamond &nbsp;
                     <EdiText
                       type="text"
@@ -361,7 +361,7 @@ const UserDetail = (props) => {
                 </li>
                 <li>
                   <span className="d-flex" style={{ alignItems: "baseline" }}>
-                    <i class="far fa-registered m-r-xxs "></i>
+                    <i className="far fa-registered m-r-xxs "></i>
                     RCoin &nbsp;{" "}
                     <EdiText
                       type="text"
@@ -372,21 +372,21 @@ const UserDetail = (props) => {
                   </span>
                 </li>
                 <li>
-                  <i class="fas fa-venus-mars m-r-xxs"></i>
+                  <i className="fas fa-venus-mars m-r-xxs"></i>
                   <span>
                     Gender &nbsp;{" "}
                     <span className="text-danger">{user?.gender}</span>
                   </span>
                 </li>
                 <li>
-                  <i class="fas fa-child m-r-xxs"></i>
+                  <i className="fas fa-child m-r-xxs"></i>
                   <span>
                     Age &nbsp;<span className="text-danger">{user?.age}</span>
                   </span>
                 </li>
 
                 <li>
-                  <i class="fas fa-sign-in-alt m-r-xxs"></i>
+                  <i className="fas fa-sign-in-alt m-r-xxs"></i>
                   <span>
                     Login Type &nbsp;
                     <span className="text-danger">
@@ -418,11 +418,11 @@ const UserDetail = (props) => {
                     {
                       isVIP != null?( <div className="d-flex" style={{marginLeft:"12px"}} >
                         <div className="d-flex">
-                          <label htmlFor="vip">Yes</label>
+                          <label htmlhtmlFor="vip">Yes</label>
                           <input type="radio" checked={isVIP == true? true:false} id="vip" onChange={handleOnChangeValue} value="true" name="vip" />
                         </div>
                        <div className="d-flex" style={{marginLeft:"12px"}}>
-                          <label htmlFor="notVip">No</label>
+                          <label htmlhtmlFor="notVip">No</label>
                           <input type="radio" checked={isVIP == false? true:false} id="notVip" onChange={handleOnChangeValue} value="false" name="vip" />
                        </div>
                       
@@ -432,33 +432,33 @@ const UserDetail = (props) => {
                   </span>
                 </li>
                 <li>
-                  <i class="fas fa-map-marker m-r-xxs"></i>
+                  <i className="fas fa-map-marker m-r-xxs"></i>
                   <span>
                     Ip &nbsp;<span className="text-danger">{user?.ip}</span>
                   </span>
                 </li>
                 <li>
-                  <i class="fas fa-clock m-r-xxs"></i>
+                  <i className="fas fa-clock m-r-xxs"></i>
                   <span>
                     Last login date &nbsp;
                     <span className="text-danger">{user?.lastLogin}</span>
                   </span>
                 </li>
-                {/* <li class="profile-about-list-buttons">
-                  <button class="btn btn-block btn-primary m-t-md icon_margin">Follow</button>
-                  <button class="btn btn-block btn-secondary m-t-md icon_margin">Message</button>
+                {/* <li className="profile-about-list-buttons">
+                  <button className="btn btn-block btn-primary m-t-md icon_margin">Follow</button>
+                  <button className="btn btn-block btn-secondary m-t-md icon_margin">Message</button>
                 </li> */}
               </ul>
             </div>
           </div>
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Contact Info</h5>
-              <ul class="list-unstyled profile-about-list">
+          <div className="card">
+            <div className="card-body">
+              <h5 className="card-title">Contact Info</h5>
+              <ul className="list-unstyled profile-about-list">
 
                 <li>
                   <span className="d-flex" style={{ alignItems: "baseline" }}>
-                  <i class="far fa-envelope m-r-xxs"></i>
+                  <i className="far fa-envelope m-r-xxs"></i>
                   Email &nbsp;
                     <EdiText
                       type="text"
@@ -472,7 +472,7 @@ const UserDetail = (props) => {
 
                 <li>
                   <span className="d-flex" style={{ alignItems: "baseline" }}>
-                  <i class="far fa-key m-r-xxs"></i>
+                  <i className="far fa-key m-r-xxs"></i>
                   Password &nbsp;
                     <EdiText
                       type="text"
@@ -484,7 +484,7 @@ const UserDetail = (props) => {
                 </li>
 
                 <li>
-                  <i class="far fa-compass m-r-xxs"></i>
+                  <i className="far fa-compass m-r-xxs"></i>
                   <span>
                     Lives in <span>{user?.country}</span>
                   </span>
@@ -493,21 +493,21 @@ const UserDetail = (props) => {
             </div>
           </div>
         </div>
-        <div class="col-md-12 col-lg-8">
-          <div class="card card-bg">
-            <div class="card-body ">
+        <div className="col-md-12 col-lg-8">
+          <div className="card card-bg">
+            <div className="card-body ">
               {followersFollowing ? (
                 <div
-                  class="container followDiv"
+                  className="container followDiv"
                   style={{ maxHeight: 548, overflow: "auto" }}
                 >
-                  <div class="row post-comments d-flex flex-wrap justify-content-between">
+                  <div className="row post-comments d-flex flex-wrap justify-content-between">
                     {followersFollowingList?.length > 0 ? (
                       followersFollowingList.map((data, index) => {
                         return (
                           <>
                             <div
-                              class="col-md-6"
+                              className="col-md-6"
                               style={{
                                 paddingRight: "10px",
                                 borderRight: `${
@@ -518,7 +518,7 @@ const UserDetail = (props) => {
                                 }`,
                               }}
                             >
-                              <div class="post-comm post-padding">
+                              <div className="post-comm post-padding">
                                 <img
                                   src={
                                     data?.toUserId.image
@@ -527,11 +527,11 @@ const UserDetail = (props) => {
                                       ? data?.fromUserId.image
                                       : Male
                                   }
-                                  class="comment-img commentImg"
+                                  className="comment-img commentImg"
                                   alt=""
                                 />
                                 <div
-                                  class="comment-container pointer-cursor"
+                                  className="comment-container pointer-cursor"
                                   onClick={() =>
                                     handleUserInfo(
                                       data?.toUserId
@@ -540,11 +540,11 @@ const UserDetail = (props) => {
                                     )
                                   }
                                 >
-                                  <span class="comment-author">
+                                  <span className="comment-author">
                                     {data?.toUserId?.name
                                       ? data?.toUserId?.name
                                       : data?.fromUserId?.name}
-                                    <small class="comment-date">
+                                    <small className="comment-date">
                                       {now.diff(data?.createdAt, "minute") <=
                                         60 &&
                                       now.diff(data?.createdAt, "minute") >= 0
@@ -596,13 +596,13 @@ const UserDetail = (props) => {
                     console.log("deatilUser::", data);
                     return (
                       <>
-                        <div class="post">
-                          <div class="post-header">
+                        <div className="post">
+                          <div className="post-header">
                             <img src={user.image ? user.image : Male} alt="" />
-                            <div class="post-info">
-                              <span class="post-author">{user?.name}</span>
+                            <div className="post-info">
+                              <span className="post-author">{user?.name}</span>
                               <br />
-                              <span class="post-date">
+                              <span className="post-date">
                                 {now.diff(data?.date, "minute") <= 60 &&
                                 now.diff(data?.date, "minute") >= 0
                                   ? now.diff(data?.date, "minute") +
@@ -619,21 +619,21 @@ const UserDetail = (props) => {
                             </p>
                           ) : (
                             <>
-                              <div class="post-body">
+                              <div className="post-body">
                                 <video
                                   src={data?.link}
-                                  class="post-image m-auto py-3"
+                                  className="post-image m-auto py-3"
                                   controls
                                   style={{ maxHeight: 400, width: "40%" }}
                                 />
                               </div>
                               <div id="myGroup">
-                                <div class="post-actions">
-                                  <ul class="list-unstyled">
+                                <div className="post-actions">
+                                  <ul className="list-unstyled">
                                     <li>
                                       <a
                                         href={() => false}
-                                        class="like-btn"
+                                        className="like-btn"
                                         onClick={() =>
                                           handleLike(
                                             data?._id,
@@ -649,7 +649,7 @@ const UserDetail = (props) => {
                                     <li>
                                       <a
                                         href={() => false}
-                                        class="like-btn"
+                                        className="like-btn"
                                         role="button"
                                         onClick={() =>
                                           handleComment(
@@ -668,9 +668,9 @@ const UserDetail = (props) => {
                                     </li>
                                   </ul>
                                 </div>
-                                <div class="post-comments">
+                                <div className="post-comments">
                                   <div
-                                    class="collapse"
+                                    className="collapse"
                                     id={`likeWrap${index}`}
                                     style={{
                                       maxHeight: 250,
@@ -678,27 +678,27 @@ const UserDetail = (props) => {
                                       display: "none",
                                     }}
                                   >
-                                    <div class="row">
-                                      <div class="col-12">
+                                    <div className="row">
+                                      <div className="col-12">
                                         {like?.length > 0 ? (
                                           like.map((like) => {
                                             return (
                                               <>
-                                                <div class="post-comm post-padding">
+                                                <div className="post-comm post-padding">
                                                   <img
                                                     src={
                                                       like.image
                                                         ? like.image
                                                         : Male
                                                     }
-                                                    class="comment-img"
+                                                    className="comment-img"
                                                     alt=""
                                                     onClick={() =>
                                                       handleUserInfo(like.user)
                                                     }
                                                   />
-                                                  <div class="comment-container pointer-cursor">
-                                                    <span class="comment-author">
+                                                  <div className="comment-container pointer-cursor">
+                                                    <span className="comment-author">
                                                       <span
                                                         onClick={() =>
                                                           handleUserInfo(
@@ -708,7 +708,7 @@ const UserDetail = (props) => {
                                                       >
                                                         {like.name}
                                                       </span>
-                                                      <small class="comment-date">
+                                                      <small className="comment-date">
                                                         {like.time}
                                                       </small>
                                                     </span>
@@ -726,24 +726,24 @@ const UserDetail = (props) => {
                                     </div>
                                   </div>
                                   <div
-                                    class="collapse"
+                                    className="collapse"
                                     id={`commentWrap${index}`}
                                     style={{ maxHeight: 250, overflow: "auto" }}
                                   >
-                                    <div class="row">
-                                      <div class="col-12">
+                                    <div className="row">
+                                      <div className="col-12">
                                         {comment?.length > 0 ? (
                                           comment.map((comment) => {
                                             return (
                                               <>
-                                                <div class="post-comm post-padding">
+                                                <div className="post-comm post-padding">
                                                   <img
                                                     src={
                                                       comment.image
                                                         ? comment.image
                                                         : Male
                                                     }
-                                                    class="comment-img commentImg"
+                                                    className="comment-img commentImg"
                                                     alt=""
                                                     onClick={() =>
                                                       handleUserInfo(
@@ -751,8 +751,8 @@ const UserDetail = (props) => {
                                                       )
                                                     }
                                                   />
-                                                  <div class="comment-container">
-                                                    <span class="comment-author pointer-cursor">
+                                                  <div className="comment-container">
+                                                    <span className="comment-author pointer-cursor">
                                                       <span
                                                         onClick={() =>
                                                           handleUserInfo(
@@ -762,7 +762,7 @@ const UserDetail = (props) => {
                                                       >
                                                         {comment.name}
                                                       </span>
-                                                      <small class="comment-date">
+                                                      <small className="comment-date">
                                                         {comment.time}
                                                         <Popconfirm
                                                           title="Are you sure to delete this comment?"

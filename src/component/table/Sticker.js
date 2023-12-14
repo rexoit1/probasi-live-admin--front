@@ -104,9 +104,9 @@ const StickerTable = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="card">
+      <div className="row">
+        <div className="col">
+          <div className="card">
             <div className="card-header pb-0">
               <div className="row my-3">
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-8 float-left">
@@ -123,10 +123,10 @@ const StickerTable = (props) => {
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-4 float-right mt-3 mt-lg-0 mt-xl-0"></div>
               </div>
             </div>
-            <div class="card-body card-overflow">
-              <div class="d-sm-flex align-items-center justify-content-between mb-4"></div>
+            <div className="card-body card-overflow">
+              <div className="d-sm-flex align-items-center justify-content-between mb-4"></div>
 
-              <table class="table table-striped text-center">
+              <table className="table table-striped text-center">
                 <thead>
                   <tr>
                     <th>No.</th>

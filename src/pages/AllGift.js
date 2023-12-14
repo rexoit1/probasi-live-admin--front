@@ -49,21 +49,21 @@ const AllGift = (props) => {
           return (
             <>
               <div
-                class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
+                className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 col-xxl-4"
                 key={index}
                 onClick={() => {
                   localStorage.setItem("CategoryId", data._id);
                   history.push("/admin/giftCategory/gift");
                 }}
               >
-                <div class="card contact-card card-bg">
-                  <div class="card-body p-1">
+                <div className="card contact-card card-bg">
+                  <div className="card-body p-1">
                     <div className="row px-3 py-4 ">
                       <div className="col-4 ps-4">
                         <img
                           src={data.image ? baseURL + data.image : noImage}
                           alt=""
-                          class="rounded-circle"
+                          className="rounded-circle"
                           style={{
                             width: "135px",
                             height: "135px",
@@ -79,18 +79,18 @@ const AllGift = (props) => {
                           paddingLeft: 5,
                         }}
                       >
-                        <div class="contact-card-info mt-2 mb-5 px-3">
+                        <div className="contact-card-info mt-2 mb-5 px-3">
                           <h2 className="text-white">Coin: {data.coin}</h2>
                         </div>
                         <div className="px-3">
                           <i
-                            class="fas fa-edit text-white p-2 bg-primary rounded-circle"
+                            className="fas fa-edit text-white p-2 bg-primary rounded-circle"
                             style={{ marginRight: 10 ,fontSize:25}}
                             onClick={() => handleEdit(data)}
                           ></i>
 
                           <i
-                            class="fas fa-trash text-white p-2 bg-danger rounded-circle"
+                            className="fas fa-trash text-white p-2 bg-danger rounded-circle"
                             style={{ marginRight: 10 ,fontSize:25}}
                             onClick={() => handleDelete(data._id)}
                           ></i>

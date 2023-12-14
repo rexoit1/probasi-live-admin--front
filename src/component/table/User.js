@@ -162,50 +162,50 @@ const UserTable = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-lg-12 col-md-2 col-sm-12">
-          <div class="row">
-            <div class="col-lg-4">
-              <div class="card stats-card">
-                <div class="card-body">
-                  <div class="stats-info">
-                    <h5 class="card-title">
+      <div className="row">
+        <div className="col-lg-12 col-md-2 col-sm-12">
+          <div className="row">
+            <div className="col-lg-4">
+              <div className="card stats-card">
+                <div className="card-body">
+                  <div className="stats-info">
+                    <h5 className="card-title">
                       {male ? male : 0}
-                      {/* <span class="stats-change stats-change-danger">-8%</span> */}
+                      {/* <span className="stats-change stats-change-danger">-8%</span> */}
                     </h5>
-                    <p class="stats-text">Male</p>
+                    <p className="stats-text">Male</p>
                   </div>
-                  <div class="stats-icon change-danger">
-                    <i class="material-icons">male</i>
+                  <div className="stats-icon change-danger">
+                    <i className="material-icons">male</i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
-              <div class="card stats-card">
-                <div class="card-body">
-                  <div class="stats-info">
-                    <h5 class="card-title">
+            <div className="col-lg-4">
+              <div className="card stats-card">
+                <div className="card-body">
+                  <div className="stats-info">
+                    <h5 className="card-title">
                       {female ? female : 0}
-                      {/* <span class="stats-change stats-change-danger">-8%</span> */}
+                      {/* <span className="stats-change stats-change-danger">-8%</span> */}
                     </h5>
-                    <p class="stats-text">Female</p>
+                    <p className="stats-text">Female</p>
                   </div>
-                  <div class="stats-icon change-success">
-                    <i class="material-icons">female</i>
+                  <div className="stats-icon change-success">
+                    <i className="material-icons">female</i>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="col-lg-4">
-              <div class="card stats-card">
-                <div class="card-body">
-                  <div class="stats-info">
-                    <h5 class="card-title">{activeUser}</h5>
-                    <p class="stats-text">Total Active User</p>
+            <div className="col-lg-4">
+              <div className="card stats-card">
+                <div className="card-body">
+                  <div className="stats-info">
+                    <h5 className="card-title">{activeUser}</h5>
+                    <p className="stats-text">Total Active User</p>
                   </div>
-                  <div class="stats-icon change-pink">
-                    <i class="material-icons">people</i>
+                  <div className="stats-icon change-pink">
+                    <i className="material-icons">people</i>
                   </div>
                 </div>
               </div>
@@ -213,9 +213,9 @@ const UserTable = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="card" id="card">
+      <div className="row">
+        <div className="col">
+          <div className="card" id="card">
             <div className="card-header pb-0">
               <div className="row my-3">
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-8 float-left">
@@ -304,8 +304,8 @@ const UserTable = (props) => {
                 </div>
               </div>
             </div>
-            <div class="card-body card-overflow pt-0">
-              <table class="table table-striped mt-5 text-center">
+            <div className="card-body card-overflow pt-0">
+              <table className="table table-striped mt-5 text-center">
                 <thead>
                   <tr>
                     <th>No.</th>

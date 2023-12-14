@@ -183,7 +183,7 @@ const Profile = (props) => {
                         <div className="row">
                           <div className="col-12">
                             <div className="form-group">
-                              <label for="first-name-vertical">Name</label>
+                              <label htmlFor="first-name-vertical">Name</label>
                               <input
                                 type="text"
                                 id="first-name-vertical"
@@ -218,7 +218,7 @@ const Profile = (props) => {
                           </div>
                           <div className="col-12">
                             <div className="form-group">
-                              <label for="email-id-vertical">Email</label>
+                              <label htmlFor="email-id-vertical">Email</label>
                               <input
                                 type="email"
                                 id="email-id-vertical"
@@ -303,7 +303,7 @@ const Profile = (props) => {
                                 }}
                               />
                               <div className="middle">
-                                <i class="fas fa-edit fa-lg text-primary"></i>
+                                <i className="fas fa-edit fa-lg text-primary"></i>
                               </div>
                             </div>
                           </div>
@@ -339,7 +339,7 @@ const Profile = (props) => {
                         <div className="row">
                           <div className="col-12">
                             <div className="form-group">
-                              <label for="first-name-vertical">
+                              <label htmlFor="first-name-vertical">
                                 Old Password
                               </label>
                               <input
@@ -376,7 +376,7 @@ const Profile = (props) => {
                           </div>
                           <div className="col-12">
                             <div className="form-group">
-                              <label for="first-name-vertical">
+                              <label htmlFor="first-name-vertical">
                                 New Password
                               </label>
                               <input
@@ -413,7 +413,7 @@ const Profile = (props) => {
                           </div>
                           <div className="col-12">
                             <div className="form-group">
-                              <label for="first-name-vertical">
+                              <label htmlFor="first-name-vertical">
                                 Confirm Password
                               </label>
                               <input

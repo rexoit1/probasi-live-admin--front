@@ -211,7 +211,7 @@ const GiftDialog = (props) => {
                   ) : (
                     <>
                       <select
-                        class="form-select form-control"
+                        className="form-select form-control"
                         aria-label="Default select example"
                         value={category}
                         onChange={(e) => {

@@ -204,7 +204,7 @@ const StickerDialog = (props) => {
                   <div className="row">
                     <label
                       className="form-control-label text-gray"
-                      for="input-username"
+                      htmlFor="input-username"
                     >
                       Select (Multiple) Image
                     </label>
@@ -274,7 +274,7 @@ const StickerDialog = (props) => {
                                     }}
                                   />
                                   <div
-                                    class="img-container"
+                                    className="img-container"
                                     style={{
                                       display: "inline",
                                       position: "relative",
@@ -282,7 +282,7 @@ const StickerDialog = (props) => {
                                     }}
                                   >
                                     <i
-                                      class="fas fa-times-circle text-danger"
+                                      className="fas fa-times-circle text-danger"
                                       style={{
                                         position: "absolute",
                                         right: "10px",

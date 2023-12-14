@@ -141,11 +141,11 @@ const FakePostPage = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="card">
-            <div class="card-body card-overflow">
-              <div class="d-sm-flex align-items-center justify-content-between mb-4"></div>
+      <div className="row">
+        <div className="col">
+          <div className="card">
+            <div className="card-body card-overflow">
+              <div className="d-sm-flex align-items-center justify-content-between mb-4"></div>
 
               <form>
                 <div className="row">
@@ -155,7 +155,7 @@ const FakePostPage = (props) => {
 
                       <>
                         <select
-                          class="form-select form-control"
+                          className="form-select form-control"
                           aria-label="Default select example"
                           value={user_}
                           onChange={(e) => {
@@ -199,9 +199,9 @@ const FakePostPage = (props) => {
 
                   <div className="col-md-6 d-flex justify-content-start mt-5">
                     <label className="mb-2 text-gray">Show Post : </label>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="show"
                         id="public"
@@ -211,13 +211,13 @@ const FakePostPage = (props) => {
                           setShow(e.target.value);
                         }}
                       />
-                      <label class="form-check-label" for="public">
+                      <label className="form-check-label" htmlFor="public">
                         Public
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="show"
                         id="private"
@@ -227,7 +227,7 @@ const FakePostPage = (props) => {
                           setShow(e.target.value);
                         }}
                       />
-                      <label class="form-check-label" for="private">
+                      <label className="form-check-label" htmlFor="private">
                         Private
                       </label>
                     </div>
@@ -282,9 +282,9 @@ const FakePostPage = (props) => {
                 {/* <div className="row mt-4">
                   <div className="col-md-6 d-flex justify-content-start">
                     <label className="mb-2 text-gray">Post Type : </label>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="imageType"
                         id="image"
@@ -294,13 +294,13 @@ const FakePostPage = (props) => {
                         }}
                         checked={imageType === "1" ? true : false}
                       />
-                      <label class="form-check-label" for="image">
+                      <label className="form-check-label" htmlFor="image">
                         Image
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="imageType"
                         id="link"
@@ -310,7 +310,7 @@ const FakePostPage = (props) => {
                           setImageType(e.target.value);
                         }}
                       />
-                      <label class="form-check-label" for="link">
+                      <label className="form-check-label" htmlFor="link">
                         Link
                       </label>
                     </div>
@@ -396,9 +396,9 @@ const FakePostPage = (props) => {
                   {/* <div className="row mt-4">
                   <div className="col-md-6 d-flex justify-content-start">
                     <label className="mb-2 text-gray">Image Type : </label>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="imageType"
                         id="image"
@@ -408,13 +408,13 @@ const FakePostPage = (props) => {
                         }}
                         checked={imageType == "1" ? true : false}
                       />
-                      <label class="form-check-label" for="image">
+                      <label className="form-check-label" htmlFor="image">
                         Image
                       </label>
                     </div>
-                    <div class="form-check">
+                    <div className="form-check">
                       <input
-                        class="form-check-input mx-2"
+                        className="form-check-input mx-2"
                         type="radio"
                         name="imageType"
                         id="linkImage"
@@ -424,7 +424,7 @@ const FakePostPage = (props) => {
                           setImageType(e.target.value);
                         }}
                       />
-                      <label class="form-check-label" for="linkImage">
+                      <label className="form-check-label" htmlFor="linkImage">
                         Link
                       </label>
                     </div>

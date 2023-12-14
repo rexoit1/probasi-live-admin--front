@@ -6,9 +6,9 @@ import { Link } from "react-router-dom"
 const Page404 = () => {
   return (
     <>
-      <div class="container">
-        <div class="error-container">
-          <div class="error-info">
+      <div className="container">
+        <div className="error-container">
+          <div className="error-info">
             <h1>404</h1>
             <p>
               It seems that the page you are looking for no longer exists.
@@ -17,7 +17,7 @@ const Page404 = () => {
               <Link to="/"> homepage</Link>.
             </p>
           </div>
-          <div class="error-image"></div>
+          <div className="error-image"></div>
         </div>
       </div>
     </>

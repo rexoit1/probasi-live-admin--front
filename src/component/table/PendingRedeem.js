@@ -111,9 +111,9 @@ const PendingRedeemTable = (props) => {
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col">
-          <div class="card">
+      <div className="row">
+        <div className="col">
+          <div className="card">
             <div className="card-header pb-0">
               <div className="row my-3">
                 <div className="col-xs-12 col-sm-12 col-md-6 col-lg-8 float-left"></div>
@@ -137,10 +137,10 @@ const PendingRedeemTable = (props) => {
                 </div>
               </div>
             </div>
-            <div class="card-body card-overflow">
-              <div class="d-sm-flex align-items-center justify-content-between mb-4"></div>
+            <div className="card-body card-overflow">
+              <div className="d-sm-flex align-items-center justify-content-between mb-4"></div>
 
-              <table class="table table-striped">
+              <table className="table table-striped">
                 <thead className="text-white">
                   <tr>
                     <th>No.</th>
@@ -188,22 +188,22 @@ const PendingRedeemTable = (props) => {
                           </td>
                           <td>
                             <button
-                              class="btn btn-sm text-white success"
+                              className="btn btn-sm text-white success"
                               onClick={() =>
                                 handleAcceptDecline(data._id, "accept")
                               }
                             >
-                              <i class="fa fa-check"></i> Accept
+                              <i className="fa fa-check"></i> Accept
                             </button>
                           </td>
                           <td>
                             <button
-                              class="btn btn-sm text-white danger"
+                              className="btn btn-sm text-white danger"
                               onClick={() =>
                                 handleAcceptDecline(data._id, "decline")
                               }
                             >
-                              <i class="fas fa-times"></i> Decline
+                              <i className="fas fa-times"></i> Decline
                             </button>
                           </td>
                         </tr>

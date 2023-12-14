@@ -122,19 +122,19 @@ const Advertisement = (props) => {
       </div>
 
       <div className="row">
-        <div class="col-md-12 col-12">
-          <div class="card">
-            <div class="card-body">
-              <div class="row">
-                <h5 class="card-title d-flex justify-content-between mb-3">
+        <div className="col-md-12 col-12">
+          <div className="card">
+            <div className="card-body">
+              <div className="row">
+                <h5 className="card-title d-flex justify-content-between mb-3">
                   Google Ad Show
-                  <label class="switch">
+                  <label className="switch">
                     <input
                       type="checkbox"
                       checked={show}
                       onChange={handleGoogleShow}
                     />
-                    <span class="slider">
+                    <span className="slider">
                       <p
                         style={{
                           fontSize: 12,
@@ -149,62 +149,62 @@ const Advertisement = (props) => {
                   </label>
                 </h5>
                 <form>
-                  {/* <div class="mb-3">
-                    <label for="native" class="form-label">
+                  {/* <div className="mb-3">
+                    <label htmlFor="native" className="form-label">
                       Native
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="native"
                       value={native}
                       onChange={(e) => setNative(e.target.value)}
                     />
                   </div> */}
-                  <div class="mb-3">
-                    <label for="reward" class="form-label">
+                  <div className="mb-3">
+                    <label htmlFor="reward" className="form-label">
                       Reward
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="reward"
                       value={reward}
                       onChange={(e) => setReward(e.target.value)}
                     />
                   </div>
-                  {/* <div class="mb-3">
-                    <label for="interstitial" class="form-label">
+                  {/* <div className="mb-3">
+                    <label htmlFor="interstitial" className="form-label">
                       Interstitial
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="interstitial"
                       value={interstitial}
                       onChange={(e) => setInterstitial(e.target.value)}
                     />
                   </div> */}
-                  {/* <div class="mb-3">
-                    <label for="banner" class="form-label">
+                  {/* <div className="mb-3">
+                    <label htmlFor="banner" className="form-label">
                       Banner
                     </label>
                     <input
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="banner"
                       value={banner}
                       onChange={(e) => setBanner(e.target.value)}
                     />
                   </div> */}
-                  <div class="mb-3 row">
-                    <div class="col-md-6">
-                      <label for="freeDiamondForAd" class="form-label">
+                  <div className="mb-3 row">
+                    <div className="col-md-6">
+                      <label htmlFor="freeDiamondForAd" className="form-label">
                         Free diamond for Advertisement
                       </label>
                       <input
                         type="Number"
-                        class="form-control"
+                        className="form-control"
                         id="freeDiamondForAd"
                         value={freeDiamondForAd}
                         onChange={(e) => setFreeDiamondForAd(e.target.value)}
@@ -221,13 +221,13 @@ const Advertisement = (props) => {
                         </div>
                       )}
                     </div>
-                    <div class="col-md-6">
-                      <label for="maxAdPerDay" class="form-label">
+                    <div className="col-md-6">
+                      <label htmlFor="maxAdPerDay" className="form-label">
                         Maximum Advertisement per day
                       </label>
                       <input
                         type="Number"
-                        class="form-control"
+                        className="form-control"
                         id="maxAdPerDay"
                         value={maxAdPerDay}
                         onChange={(e) => setMaxAdPerDay(e.target.value)}
@@ -248,7 +248,7 @@ const Advertisement = (props) => {
                   <div className="d-flex justify-content-end">
                     <button
                       type="button"
-                      class="btn btn-danger "
+                      className="btn btn-danger "
                       onClick={handleSubmit}
                     >
                       Submit

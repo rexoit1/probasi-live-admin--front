@@ -2,7 +2,7 @@ import React from "react";
 
 const PurchaseCoinPlan = (props) => {
   return (
-    <table class="table table-striped mt-5">
+    <table className="table table-striped mt-5">
       <thead>
         <tr>
           <th>No.</th>
