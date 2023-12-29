@@ -354,6 +354,7 @@ const FakeUser = (props) => {
                     <th>No.</th>
                     <th>Image</th>
                     <th>Video</th>
+                    <th>UserId</th>
                     <th>Username</th>
                     <th>Gender</th>
                     {/* <th onClick={handleCoinSort} style={{ cursor: "pointer" }}>
@@ -420,6 +421,7 @@ const FakeUser = (props) => {
                               controls
                             />
                           </td>
+                          <td>{data.uniqueId}</td>
                           <td>{data.username}</td>
                           <td>{data.gender}</td>
                           <td className="text-danger">{data.rCoin}</td>

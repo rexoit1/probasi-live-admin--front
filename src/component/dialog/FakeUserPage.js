@@ -205,6 +205,11 @@ const FakeUserPage = (props) => {
                               ...errors,
                               name: "name is Required!",
                             });
+                          } else if(e.target.value.length > 20) {
+                            return setError({
+                              ...errors,
+                              name: "The name must be less than 20 characters!",
+                            });
                           } else {
                             return setError({
                               ...errors,

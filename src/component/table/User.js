@@ -310,6 +310,7 @@ const UserTable = (props) => {
                   <tr>
                     <th>No.</th>
                     <th>Image</th>
+                    <th>UserId</th>
                     <th>Username</th>
                     <th>Gender</th>
                     {/* <th onClick={handleCoinSort} style={{ cursor: "pointer" }}>
@@ -361,6 +362,7 @@ const UserTable = (props) => {
 
                             />
                           </td>
+                          <td>{data.uniqueId}</td>
                           <td>{data.username}</td>
                           <td>{data.gender}</td>
                           <td className="text-danger">{data.rCoin}</td>

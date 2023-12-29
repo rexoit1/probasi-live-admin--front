@@ -350,6 +350,80 @@ const Dashboard = (props) => {
                 </div>
               </div>
             </div>
+
+            <div class="col-lg-3">
+              <div class="card stats-card">
+                <div
+                  class="card-body pointer-cursor"
+                >
+                  <div class="stats-info">
+                    <h5 class="card-title">
+                      {dashboard?.sumData?.totalrCoin ? dashboard?.sumData?.totalrCoin : 0}
+                    </h5>
+                    <p class="stats-text">Available RCoin</p>
+                  </div>
+                  <div class="stats-icon change-danger">
+                    <i class="material-icons">monetization_on</i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3">
+              <div class="card stats-card">
+                <div
+                  class="card-body pointer-cursor"
+                >
+                  <div class="stats-info">
+                    <h5 class="card-title">
+                      {dashboard?.sumData?.totalDiamond ? dashboard?.sumData?.totalDiamond : 0}
+                    </h5>
+                    <p class="stats-text">Available Diamond</p>
+                  </div>
+                  <div class="stats-icon change-success">
+                    <i class="material-icons">diamond</i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="card stats-card">
+                <div
+                  class="card-body pointer-cursor"
+                >
+                  <div class="stats-info">
+                    <h5 class="card-title">
+                      {dashboard?.sumData?.totalSpentCoin ? dashboard?.sumData?.totalSpentCoin : 0}
+                    </h5>
+                    <p class="stats-text">Total Spent Coin</p>
+                  </div>
+                  <div class="stats-icon change-pink">
+                    <i class="material-icons">currency_exchange</i>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="card stats-card">
+                <div
+                  class="card-body pointer-cursor"
+                >
+                  <div class="stats-info">
+                    <h5 class="card-title">
+                      {dashboard?.sumData?.totalWithdrawalRcoin ? dashboard?.sumData?.totalWithdrawalRcoin : 0}
+                    </h5>
+                    <p class="stats-text">Total Withdrawal RCoin</p>
+                  </div>
+                  <div class="stats-icon change-danger">
+                    <i class="material-icons">redeem</i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+
+
           </div>
         </div>
       </div>
